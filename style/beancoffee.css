@@ -272,14 +272,22 @@ header {
   padding: 0 10px;
 }
 
+.coffee-info p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+
 .coffee-card.active .coffee-info {
   max-height: 500px;
   margin-top: 10px;
 }
 
 .bean-img {
-  width: 150px;
-  height: auto;
+  width: fit-content;
+  height: 150px;
+  object-fit: cover;
   display: block;
   margin: 0 auto 10px;
 }
