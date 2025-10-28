@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Classic White Bean Bag",
+        "description": "A timeless white bean bag that fits any decor.",
+        "price": 49.99,
+        "image": ""
+    },
+    {
+        "name": "Modern Grey Bean Bag",
+        "description": "A sleek grey bean bag for a contemporary look.",
+        "price": 59.99,
+        "image": ""
+    },
+    {
+        "name": "Vibrant Red Bean Bag",
+        "description": "Add a pop of color with this vibrant red bean bag.",
+        "price": 54.99,
+        "image": ""
+    }
+]
