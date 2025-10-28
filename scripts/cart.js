@@ -1,21 +1,5 @@
 let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-
-const priceList = {
-  "Espresso": 3.50,
-  "Mocha": 4.50,
-  "Americano": 3.00,
-  "Cappuccino": 4.25,
-  "Latte": 4.00,
-  "Macchiato": 4.75,
-  "Coffee Grinder": 35.00,
-  "Drip Coffee Maker": 50.00,
-  "Capsule Machine": 80.00,
-  "Moka Pot": 25.00,
-  "Espresso Machine": 120.00,
-  "Coffee Blender": 45.00,
-  "Cold Brew Toddy": 30.00,
-  "Pour Over Equipment": 40.00
-};
+console.log(cartItems);
 
 
 const deleteMsg = [];
@@ -36,8 +20,7 @@ function renderCart() {
   }
 
   cartItems.forEach((item, index) => {
-    const price = priceList[item.name] || 5.00;
-    item.price = price;
+    const price = item.price;
 
     const div = document.createElement("div");
     div.classList.add("cart-item");
@@ -47,7 +30,7 @@ function renderCart() {
         <img src="${item.image}" alt="${item.name}">
         <div>
           <h5>${item.name}</h5>
-          <p>$${price.toFixed(2)}</p>
+          <p>$${item.price.toFixed(2)}</p>
         </div>
       </div>
       <div class="quantity-controls">

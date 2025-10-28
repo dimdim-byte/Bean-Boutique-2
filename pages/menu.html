@@ -21,64 +21,59 @@
 <body>
   <!-- Header (same as homepage navigation) -->
   <header class="main-header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Bean Boutique</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link active" href="menu.html">Menu</a></li>
-            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
-            <li class="nav-item"><a class="nav-link" href="cart.html">Cart</a></li>
-          </ul>
-        </div>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0,0,0,0.3); backdrop-filter: blur(6px);">
+    <div class="container-fluid px-4">
+      
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <img src="../assets/images/minimalist-coffee-logo-on-a-white-background-vector.png" alt="Bean Boutique Logo" class="logo me-2" />
+        <span class="brand-name">Bean Boutique</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-lg-4 text-center">
+          <li class="nav-item"><a class="nav-link active" href="../pages/index.html#Home"">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../pages/index.html#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#coffee-menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#equipment">Equipment</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offers">Special Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events & Workshops</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html"><i class="bi bi-cart3"></i></a></li>
+        </ul>
       </div>
-    </nav>
-  </header>
+
+     
+    </div>
+  </nav>
+</header>
 
   <!-- Menu Section -->
-  <section id="menu" class="container-fluid mt-5 pt-5">
-    <div class="container text-center">
-      <h2 class="menu-heading">Our Coffee Menu</h2>
-      <div class="menu-grid">
-        <!-- Coffee Card -->
-        <div class="menu-card">
-          <img src="espresso.jpg" alt="Espresso">
-          <h4 class="menu-title">Espresso</h4>
-          <i class="bi bi-chevron-down arrow"></i>
-          <div class="menu-info">
-            <img src="beans.png" alt="Beans">
-            <p>Rich and bold espresso with deep caramelized aroma. Best enjoyed with steamed milk or plain.</p>
-            <button class="btn add-to-cart">Add to cart</button>
+   <section id="coffee-menu"  class="container py-5"> 
+    <h2 class="menu-title text-center mt-5 mb-5">Explore our delicious coffee blends</h2> 
+    <div class="row g-4 justify-content-center">
+      <!-- Coffee Card -->
+       <template id="coffee-template">
+          <div class="col-md-4 col-sm-6">
+            <div class="coffee-card" data-name="">
+              <img src="" alt="" class="coffee-img" />
+              <h3></h3>
+              <p class="coffee-price"></p>
+              <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
+              <div class="coffee-info">
+                <img src="" alt="" class="bean-img">
+                <p></p>
+                <button class="add-to-cart-btn"">Add to Cart</button>
+              </div>
+            </div>
           </div>
-        </div>
+       </template>
+    
+      
+ 
 
-        <div class="menu-card">
-          <img src="mocha.jpg" alt="Mocha">
-          <h4 class="menu-title">Mocha</h4>
-          <i class="bi bi-chevron-down arrow"></i>
-          <div class="menu-info">
-            <img src="beans.png" alt="Beans">
-            <p>Chocolate-infused espresso with steamed milk. A perfect sweet balance.</p>
-            <button class="btn add-to-cart">Add to cart</button>
-          </div>
-        </div>
-
-        <div class="menu-card">
-          <img src="americano.jpg" alt="Americano">
-          <h4 class="menu-title">Americano</h4>
-          <i class="bi bi-chevron-down arrow"></i>
-          <div class="menu-info">
-            <img src="beans.png" alt="Beans">
-            <p>Smooth espresso diluted with hot water for a lighter, aromatic flavor.</p>
-            <button class="btn add-to-cart">Add to cart</button>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -101,5 +96,9 @@
       });
     });
   </script>
+
+
+  <script src="../scripts/menu.js"></script>
+  <script src="../scripts/script.js"></script>  
 </body>
 </html>

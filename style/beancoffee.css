@@ -233,6 +233,23 @@ header {
   color: #4a331f;
 }
 
+.see-more-btn{
+  background: none;
+  color: #fff;
+  border: 1px solid #ffff;
+  padding: 10px 0px;
+  width: 170px;
+  transition: all 0.3s ease;
+}
+
+.see-more-btn:hover{
+  background-color: #c9a06c;
+  border-color: #c9a06c;
+  color: #000;
+  transform: scale(1.05);
+  border-radius: 10px;
+}
+
 .toggle-info {
   background: none;
   border: none;
@@ -1054,3 +1071,10 @@ header.main-header {
   box-shadow: 0 6px 18px rgba(0,0,0,0.4);
 }
 
+.footer-text{
+  position: absolute;
+  right: 20px;
+  bottom: 0px;
+  font-size: 0.9rem;
+  color: #d3c4a0;
+}
