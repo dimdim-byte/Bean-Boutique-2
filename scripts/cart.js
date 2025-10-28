@@ -35,7 +35,7 @@ function renderCart() {
       </div>
       <div class="quantity-controls">
         <button onclick="updateQuantity(${index}, -1)">-</button>
-        <span>${item.quantity}</span>
+        <span class="qty">${item.quantity}</span>
         <button onclick="updateQuantity(${index}, 1)">+</button>
       </div>
 
@@ -90,8 +90,11 @@ const removeDelMsgs = () => {
 function updateQuantity(index, change) {
   
   cartItems[index].quantity = Math.max(1, cartItems[index].quantity + change);
+  const cart = document.querySelectorAll(".cart-item");
+  const qtySpan = cart[index].querySelector(".qty");
+  qtySpan.textContent = cartItems[index].quantity;
+  calculateTotal();
   saveData();
-  renderCart(); 
 }
 
 
