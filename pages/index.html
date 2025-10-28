@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Boutique</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="../style/beancoffee.css" />
+</head>
+
+<body>
+   <!--Navigation Bar-->
+<header class="main-header">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0,0,0,0.3); backdrop-filter: blur(6px);">
+    <div class="container-fluid px-4">
+      
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <img src="../assets/images/minimalist-coffee-logo-on-a-white-background-vector.png" alt="Bean Boutique Logo" class="logo me-2" />
+        <span class="brand-name">Bean Boutique</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-lg-4 text-center">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#coffee-menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#equipment">Equipment</a></li>
+          <li class="nav-item"><a class="nav-link" href="#offers">Special Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events & Workshops</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html"><i class="bi bi-cart3"></i></a></li>
+        </ul>
+      </div>
+
+      <button class="btn btn-outline-light rounded-pill ms-lg-3" id="auth-toggle-btn">
+        <i class="bi bi-person"></i> Login / Signup
+      </button>
+    </div>
+  </nav>
+</header>
+
+
+  <!--Home Page-->
+  <section id="home" class="text">
+    <div class="text-text">
+      <h1>
+        Start strong.<br />
+        Start fresh.<br />
+        Start with our coffee.
+      </h1>
+      <button type="button" class="button" id="orderNowBtn">Order Now</button>
+      </div>
+  </section>
+
+<!--Follow Us-->
+<section id="social-feed" class="follow-section py-5">
+  <div class="container text-center">
+    <h2 class="follow-title mb-4">Follow Us</h2>
+    <p class="follow-subtitle mb-5">Stay connected with Bean Boutique — sip, share, and spread the love of coffee.</p>
+
+    <div class="social-grid d-flex justify-content-center flex-wrap gap-4">
+      <a href="#" class="social-card">
+        <i class="bi bi-instagram"></i>
+        <span>@beanboutique</span>
+      </a>
+      <a href="#" class="social-card">
+        <i class="bi bi-facebook"></i>
+        <span>Bean Boutique</span>
+      </a>
+      <a href="#" class="social-card">
+        <i class="bi bi-twitter-x"></i>
+        <span>@beanboutique_coffee</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  <!--About Us-->
+  <section id="about" class="about-section container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <div class="about-text p-4">
+          <h2 class="about-title mb-4">About Us!</h2>
+          <p>At Bean Boutique, we craft flavorful, high-quality coffee brews designed to awaken the senses. Just one sip can spark energy and joy that lasts the whole day.</p>
+          <p>Our journey began in 2020, when our founder Myint Mo discovered her love for coffee during a quiet home stay. What started as a small passion project soon evolved into a pursuit of perfection. Her dedication never faded — and it’s the same spirit that defines us today.</p>
+          <p>Our signature brew remained a hidden treasure for years, refined through patience and care. Now, we’re proud to share it with the world — one cup at a time.</p>
+          <p>We also offer subscription plans, delivering freshly roasted beans and carefully curated blends straight to your doorstep. Every batch is handcrafted with precision and heart, ensuring each cup feels personal and full of warmth.</p>
+          <p>At Bean Boutique, coffee is more than a beverage — it’s a daily ritual, a moment of comfort, and a bridge between people.</p>
+          <p>Our mission is simple: to craft coffee that inspires connection — one sip, one story, one moment at a time.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 text-center">
+        <img src="../assets/images/aboutuscoffee.jpg" alt="Cup of coffee with beans" class="img-fluid rounded shadow-lg about-image">
+      </div>
+    </div>
+  </section>
+
+  <!--Sign Up-->
+  <section id="sidebar-auth">
+    <button class="close-btn" aria-label="Close Login/Signup Panel">&times;</button>
+    <div class="auth-content">
+      <h2 class="auth-heading">Signup</h2>
+      <form id="signup-form">
+        <div class="mb-3"><input type="text" class="form-control" id="signup-name" placeholder="Name" required></div>
+        <div class="mb-3"><input type="email" class="form-control" id="signup-email" placeholder="Email" required></div>
+        <div class="mb-3"><input type="password" class="form-control" id="signup-password" placeholder="Password" required></div>
+        <button type="submit" class="btn auth-btn signup-btn w-100">Signup</button>
+      </form>
+
+      <hr class="auth-divider">
+
+      <h2 class="auth-heading">Login</h2>
+      <form id="login-form">
+        <div class="mb-3"><input type="text" class="form-control" id="login-username" placeholder="Username or Email" required></div>
+        <div class="mb-3"><input type="password" class="form-control" id="login-password" placeholder="Password" required></div>
+        <button type="submit" class="btn auth-btn login-btn w-100">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <div class="coffee-filter mb-3">
+    <input type="text" id="coffeeSearch" placeholder="Search coffee...">
+  </div>
+
+ 
+
+  <section id="coffee-menu" class="container py-5"> 
+    <h2 class="menu-title text-center mb-5">Our Menu</h2> 
+    <div class="row g-4 justify-content-center">
+      <!-- Coffee Card -->
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Espresso">
+        <img src="../assets/images/Espresso.png" alt="Espresso" class="coffee-img" />
+        <h3>Espresso</h3>
+        <p class="coffee-price">$3.00</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <img src="../assets/images/EspressoBean.png" alt="EspressoBean" class="bean-img">
+          <p>Strong and bold, our Espresso delivers a rich aroma and intense flavor shot brewed to perfection.</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Mocha">
+        <img src="../assets/images/Mocha.png" alt="Mocha" class="coffee-img" />
+        <h3>Mocha</h3>
+        <p class="coffee-price">$5.50</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <img src="../assets/images/MochaBean.png" alt="MochaBean" class="bean-img">
+          <p>Mocha blends espresso, chocolate, and steamed milk for a smooth, sweet, and creamy experience.</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Americano">
+        <img src="../assets/images/Americano.jpg" alt="Americano" class="coffee-img" />
+        <h3>Americano</h3>
+        <p class="coffee-price">$4.00</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <img src="../assets/images/AmericanoBean.jpg" alt="AmericanoBean" class="bean-img">
+          <p>Espresso diluted with hot water for a mellow, clean taste — perfect for those who love lighter brews.</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Cappuccino">
+        <img src="../assets/images/Cappuccino.png" alt="Cappuccino" class="coffee-img" />
+        <h3>Cappuccino</h3>
+        <p class="coffee-price">$4.50</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <img src="../assets/images/CappuccinoBean.png" alt="CappuccinoBean" class="bean-img">
+          <p>Perfectly balanced espresso, steamed milk, and frothy foam — a creamy classic.</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Latte">
+        <img src="../assets/images/Latte.png" alt="Latte" class="coffee-img" />
+        <h3>Latte</h3>
+        <p class="coffee-price">$5.00</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <img src="../assets/images/LatteBean.png" alt="LatteBean" class="bean-img">
+          <p>A smooth mix of espresso and steamed milk topped with light foam — mild and comforting.</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Macchiato">
+        <img src="../assets/images/Macchiato.jpg" alt="Macchiato" class="coffee-img" />
+        <h3>Macchiato</h3>
+        <p class="coffee-price">$3.50</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <img src="../assets/images/MacchiatoBean.jpg" alt="MacchiatoBean" class="bean-img">
+          <p>Espresso “marked” with milk foam — bold flavor with a touch of creaminess.</p>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+
+  <!--Events and Workshops-->
+  <section id="events" class="events-section py-5">
+    <div class="container text-center">
+      <h2 class="events-title mb-4">Check out for upcoming events and Register Now!</h2>
+
+      <div class="row justify-content-center g-4 mb-4">
+        <div class="col-md-4 col-sm-6"><img src="../assets/images/EW1.png" alt="Workshop" class="event-img img-fluid rounded shadow"></div>
+        <div class="col-md-4 col-sm-6"><img src="../assets/images/EW2.png" alt="Coffee Expo" class="event-img img-fluid rounded shadow"></div>
+        <div class="col-md-4 col-sm-6"><img src="../assets/images/EW3.png" alt="Latte Art Class" class="event-img img-fluid rounded shadow"></div>
+      </div>
+
+      <div class="event-details d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 px-3">
+        <button class="register-btn">Register</button>
+        <p class="event-text text-start">
+          Join our exclusive events and workshops designed for coffee lovers and creative minds alike. Learn the art of perfect brewing, explore latte design, and connect with fellow enthusiasts in a cozy, inspiring atmosphere. Don’t miss your chance to sip, learn, and share the passion — spots fill up fast!
+      </div>
+    </div>
+  </section>
+
+  <!--Registration-->
+  <div id="registrationModal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="modal-close-btn">&times;</span>
+      <h2>Registration Form</h2>
+      <form class="registration-form mt-3">
+        <label>First Name:</label>
+        <input type="text" required>
+        <label>Last Name:</label>
+        <input type="text" required>
+        <label>Email:</label>
+        <input type="email" required>
+        <label>Contact:</label>
+        <input type="tel" required>
+        <label>Address:</label>
+        <input type="text" required>
+        <label>Gender:</label>
+        <input type="text" required>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!--Equipment-->
+   
+
+ <!--Menu-->
+<script>
+const searchInput = document.getElementById('coffeeSearch');
+searchInput.addEventListener('input', function() {
+  const query = this.value.toLowerCase();
+  document.querySelectorAll('.coffee-card').forEach(card => {
+    const name = card.dataset.name.toLowerCase();
+    card.style.display = name.includes(query) ? 'block' : 'none';
+  });
+});
+</script>
+
+  <section id="equipment" class="container py-5">
+    <h2 class="menu-title text-center mb-5">Our Best-Selling Coffee Equipment</h2>
+    <div class="row g-4 justify-content-center">
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Coffee Grinder">
+        <img src="../assets/images/CoffeeGrinder.jpg" alt="Coffee Grinder" class="coffee-img" />
+        <h3>Coffee Grinder</h3>
+        <p class="coffee-price">$49.99</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <p>Precision grinding for consistent flavor extraction. Essential for every brewing style.</p>
+          <div class="rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Drip Coffee Maker">
+        <img src="../assets/images/DripCoffeeMakers.jpg" alt="Drip Coffee Maker" class="coffee-img" />
+        <h3>Drip Coffee Maker</h3>
+        <p class="coffee-price">$79.99</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <p>Automatic brewing for smooth, balanced cups every morning.</p>
+          <div class="rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Capsule Machine">
+        <img src="../assets/images/CapsuleMachine.jpg" alt="Capsule Machine" class="coffee-img" />
+        <h3>Capsule Machine</h3>
+        <p class="coffee-price">$129.99</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <p>Quick and clean brewing for busy mornings with minimal effort.</p>
+          <div class="rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Moka Pot">
+        <img src="../assets/images/MokaPot.jpg" alt="Moka Pot" class="coffee-img" />
+        <h3>Moka Pot</h3>
+        <p class="coffee-price">$39.99</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <p>Classic Italian design that delivers bold, stovetop espresso every time.</p>
+          <div class="rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Espresso Machine">
+        <img src="../assets/images/Espresso Machine.jpg" alt="Espresso Machine" class="coffee-img" />
+        <h3>Espresso Machine</h3>
+        <p class="coffee-price">$299.99</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <p>Professional-grade pressure system for authentic espresso shots at home.</p>
+          <div class="rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Coffee Blender">
+        <img src="../assets/images/CoffeeBlender.jpg" alt="Coffee Blender" class="coffee-img" />
+        <h3>Coffee Blender</h3>
+        <p class="coffee-price">$89.99</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <p>Blend your iced coffees, frappes, or cold brews to creamy perfection.</p>
+          <div class="rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Coffee Brew Toddy">
+        <img src="../assets/images/ColdBrewToddy.png" alt="Cold Brew Toddy" class="coffee-img" />
+        <h3>Cold Brew Toddy</h3>
+        <p class="coffee-price">$48.99</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <p>Perfect for smooth, rich cold brew with minimal bitterness.</p>
+          <div class="rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+            <i class="bi bi-star"></i>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-sm-6">
+      <div class="coffee-card" data-name="Pour Over Equipment">
+        <img src="../assets/images/PourOverEquipment.jpg" alt="Pour Over Equipment" class="coffee-img" />
+        <h3>Pour Over Equipment</h3>
+        <p class="coffee-price">$49.95</p>
+        <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+        <div class="coffee-info">
+          <p>Control every pour for a perfectly balanced and aromatic brew.</p>
+          <div class="rating">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+
+<!--Speical Offers-->
+<section id="offers" class="subscription-section py-5">
+  <div class="container text-center text-dark">
+    <h2 class="menu-title mb-5 fw-bold">Subscription</h2>
+    <div class="row justify-content-center g-4">
+
+      <div class="col-md-4 col-sm-6">
+        <div class="subscription-card bg-white rounded-4 shadow-lg p-4 h-100">
+          <h2 class="fw-bold text-uppercase mb-3 text-brown">Silver Membership</h2>
+          <h4 class="fw-bold mb-3">$9.99<br><span class="text-muted fs-6">per month</span></h4>
+          <p class="text-muted small mb-4">
+            Perfect for casual coffee lovers. Enjoy monthly deliveries of our signature brews, freshly roasted and packed for your comfort.
+          </p>
+          <ul class="text-start text-muted small mb-4 ps-3">
+            <li>2 coffee bags per month (250g each)</li>
+            <li>Early access to new seasonal blends</li>
+            <li>5% member discount on all store purchases</li>
+          </ul>
+          <button class="btn btn-brown rounded-pill px-4 py-2">Join</button>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="subscription-card bg-white rounded-4 shadow-lg p-4 h-100">
+          <h2 class="fw-bold text-uppercase mb-3 text-brown">Gold Membership</h2>
+          <h4 class="fw-bold mb-3">$13.99<br><span class="text-muted fs-6">per month</span></h4>
+          <p class="text-muted small mb-4">
+            For those who take their coffee seriously. Get premium blends, exclusive flavors, and a richer experience every month.
+          </p>
+          <ul class="text-start text-muted small mb-4 ps-3">
+            <li>3 coffee bags per month (300g each)</li>
+            <li>Free tasting kit every 2 months</li>
+            <li>10% storewide discount + birthday voucher</li>
+            <li>Priority customer support</li>
+          </ul>
+          <button class="btn btn-brown rounded-pill px-4 py-2">Join</button>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="subscription-card bg-white rounded-4 shadow-lg p-4 h-100">
+          <h2 class="fw-bold text-uppercase mb-3 text-brown">Diamond Membership</h2>
+          <h4 class="fw-bold mb-3">$15.99<br><span class="text-muted fs-6">per month</span></h4>
+          <p class="text-muted small mb-4">
+            Crafted for true coffee connoisseurs. Experience our rarest beans, personalized recommendations, and the full Bean Boutique experience.
+          </p>
+          <ul class="text-start text-muted small mb-4 ps-3">
+            <li>4 coffee bags per month (350g each, custom roast levels)</li>
+            <li>Limited-edition and early-release blends</li>
+            <li>15% discount + free shipping</li>
+            <li>Exclusive member events & gift sets</li>
+          </ul>
+          <button class="btn btn-brown rounded-pill px-4 py-2">Join</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!--Footer-->
+  <footer class="text-center py-4">
+    <p class="mb-0 text-muted">&copy; 2025 Bean Boutique. All rights reserved.</p>
+    <h3>Find Us</h3>
+    <section id="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799143416!2d92.79999999999999!3d21.916221500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c3f1f3c3f1f1f1%3A0x123456789abcdef!2sYangon%2C%20Myanmar!5e0!3m2!1sen!2smm!4v1698020000000!5m2!1sen!2smm"
+        width="100%"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+</section>
+
+
+
+  </footer>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#what-we-do">What do we do?</a></li>
+        <li><a href="#stores">Local Retail Stores</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Customer Service</h4>
+      <ul>
+        <li><a href="#hotline">Hot Line</a></li>
+        <li><a href="#report">Report Problem</a></li>
+        <li><a href="#support">24/7 Customer Service</a></li>
+        <li><a href="#help">Help Center</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Our Policies</h4>
+      <ul>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#refunds">Return & Refunds</a></li>
+        <li><a href="#terms">Terms & Conditions</a></li>
+        <li><a href="#shipping">Shipping & Deliveries</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact-icons">
+      <h4>Contact Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="../assets/images/FB.png" alt="Facebook"></a>
+        <a href="#"><img src="../assets/images/Insta.webp" alt="Instagram"></a>
+        <a href="#"><img src="../assets/images/X.png" alt="X"></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="../scripts/script.js"></script>
+</body>
+</html>
