@@ -22,8 +22,7 @@ const fetchData = async () => {
 const coffeeTemplate = document.getElementById('coffee-template');
 const menuContainer = document.getElementById('coffee-menu');
 
-const renderMenu = async () => {
-    const data = await fetchData();
+const renderMenu = (data) => {
     const container = document.createElement('div');
     container.classList.add("row", "g-4", "justify-content-center");
 
@@ -50,6 +49,11 @@ const renderMenu = async () => {
     
 };
 
+const renderPage = async () => {
+    const data = await fetchData();
+    renderMenu(data);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    renderMenu();
+    renderPage();
 });

@@ -27,6 +27,67 @@ header {
   padding: 15px 30px;
 }
 
+.popup-message {
+  background-color: #282828;
+  max-width: 500px;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  border-radius: 20px;
+  display: flex; /* always flex */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #787878;
+  padding: 30px;
+  gap: 10px;
+  border-bottom: 7px solid #AD5300;
+
+  opacity: 0;
+  visibility: hidden; /* ✅ hides but allows transition */
+  transition: opacity 0.5s ease;
+}
+
+.popup-message.show {
+  visibility: visible;
+  opacity: 1;
+  
+}
+
+
+.popup-message p{
+  font-size: 1em;
+  color: #fff;
+  text-align: center;
+}
+
+.popup-message h2{
+  color: #AD5300;
+}
+
+.popup-message img{
+  width: 70px;
+  display: block;
+}
+
+.popup-message button{
+  color: #fff;
+  width: 80%;
+  height: 50px;
+  background-color: #AD5300;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .popup-message img{
+    max-width: 40px;
+  }
+  
+}
+
 .nav-container {
   display: flex;
   align-items: center;

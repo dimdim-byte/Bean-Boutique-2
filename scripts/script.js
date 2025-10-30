@@ -30,6 +30,40 @@ export const addToCart = (e) => {
         }
 
         localStorage.setItem('cart', JSON.stringify(cart));
-        alert(`${name} added to your cart! 🛒`);
+        showPopUp(`${name} added to cart!`);
 }
 
+const showPopUp = (message) => {
+
+  const div = document.createElement('div');
+  div.classList.add('popup-message');
+  const img = document.createElement('img');
+  img.src = "../assets/images/check.png";
+  img.alt = "check_png";
+  const h2 = document.createElement('h2');
+  h2.textContent = "Success!";
+  const p = document.createElement('p');
+  p.textContent = message;
+  const btn = document.createElement('button');
+  btn.id = "closePopup";
+  btn.textContent = "Close";
+
+  div.appendChild(img);
+  div.appendChild(h2);
+  div.appendChild(p);
+  div.appendChild(btn);
+
+  btn.addEventListener('click', () => {
+    const popup = document.querySelector('.popup-message');
+    popup.style.opacity = '0';
+    popup.addEventListener('transitionend', ()=> {
+      document.body.removeChild(popup);
+    }) // wait for fade out
+  });
+
+  document.body.appendChild(div);
+
+  requestAnimationFrame(() => {
+    document.querySelector('.popup-message').classList.add('show');
+  });
+}
