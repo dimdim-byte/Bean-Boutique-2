@@ -1,3 +1,6 @@
+import { addToCart, goToPage } from './script.js';
+import { toggleInfo } from './script.js';
+
 document.addEventListener('DOMContentLoaded', () => {
   const authPanel = document.getElementById('sidebar-auth');
   const authToggleBtn = document.getElementById('auth-toggle-btn');
@@ -24,29 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
     authPanel.classList.remove('open');
   });
 
-  const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
-  if (addToCartBtns) {
-     addToCartBtns.forEach(button => {
-      button.addEventListener('click', (e) => {
-        const card = e.target.closest('.coffee-card');
-        const name = card.querySelector('h3').textContent;
-        const image = card.querySelector('img').src;
-        const price = parseInt(e.target.dataset.price); 
-
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const existing = cart.find(item => item.name === name);
-
-        if (existing) {
-          existing.quantity += 1;
-        } else {
-          cart.push({ name, image, price, quantity: 1 });
-        }
-
-        localStorage.setItem('cart', JSON.stringify(cart));
-        alert(`${name} added to your cart! 🛒`);
-      });
+  document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+      button.addEventListener('click', addToCart);
   });
-  }
+  
+  document.querySelectorAll(".toggle-info").forEach(button => {
+    button.addEventListener('click', toggleInfo);
+  })
 
  
 
@@ -81,6 +68,10 @@ document.getElementById('orderNowBtn').addEventListener('click', () => {
   document.querySelector('#coffee-menu').scrollIntoView({ behavior: 'smooth' });
 });
 
+document.getElementById('visitMenuBtn').addEventListener('click', () => {
+  goToPage('../pages/menu.html');
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('coffeeSearch');
   if (!searchInput) return; 
@@ -93,3 +84,5 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+

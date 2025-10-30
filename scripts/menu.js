@@ -1,3 +1,7 @@
+import { addToCart } from './script.js';
+import { toggleInfo } from './script.js';
+
+
 const fetchUrl = "../data/data.json";
 const fetchData = async () => {
     try {
@@ -12,24 +16,7 @@ const fetchData = async () => {
     }
 };
 
-const addToCart = (e) => {
-        const card = e.target.closest('.coffee-card');
-        const name = card.querySelector('h3').textContent;
-        const image = card.querySelector('img').src;
-        const price = parseInt(e.target.dataset.price); 
 
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const existing = cart.find(item => item.name === name);
-
-        if (existing) {
-          existing.quantity += 1;
-        } else {
-          cart.push({ name, image, price, quantity: 1 });
-        }
-
-        localStorage.setItem('cart', JSON.stringify(cart));
-        alert(`${name} added to your cart! 🛒`);
-};
 
 
 const coffeeTemplate = document.getElementById('coffee-template');
@@ -54,6 +41,7 @@ const renderMenu = async () => {
         clone.querySelector('.add-to-cart-btn').textContent = "Add to Cart";
         clone.querySelector('.add-to-cart-btn').dataset.price = element.price;
         clone.querySelector('.add-to-cart-btn').addEventListener('click', addToCart);
+        clone.querySelector('.toggle-info').addEventListener('click', toggleInfo);
 
         container.appendChild(clone);
     });
