@@ -19,12 +19,14 @@ const fetchData = async () => {
 
 
 
+
 const coffeeTemplate = document.getElementById('coffee-template');
 const menuContainer = document.getElementById('coffee-menu');
+const container = document.querySelector('.coffee-container');
 
 const renderMenu = (data) => {
-    const container = document.createElement('div');
-    container.classList.add("row", "g-4", "justify-content-center");
+   
+    container.innerHTML = "";
 
     data.forEach(element => {
         const clone = coffeeTemplate.content.cloneNode(true);
@@ -54,6 +56,54 @@ const renderPage = async () => {
     renderMenu(data);
 }
 
+const sortMenu = async (option) => {
+    const data = await fetchData();
+    switch (option){
+        case 'default':{
+            renderMenu(data);
+            break;
+        }
+        case 'priceLow':{
+            const sorted = [...data].sort((a, b) => a.price - b.price);
+            console.log(sorted);
+            renderMenu(sorted);
+            break;
+        }
+        case 'priceHigh':{
+            const sorted = [...data].sort((a, b) => b.price - a.price);
+            renderMenu(sorted);
+            break;
+        }
+        
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     renderPage();
+
+    const dropDownBtn = document.querySelector(".dropdown-btn");
+    const icon = dropDownBtn.querySelector('i');
+    const optionsBox = document.querySelector(".options-box");
+
+    dropDownBtn.addEventListener('click', () => {
+        
+         requestAnimationFrame(() => {
+            optionsBox.classList.toggle("show");
+        });
+        icon.classList.toggle('bi-chevron-down');
+        icon.classList.toggle('bi-chevron-up');
+    })
+
+    document.querySelectorAll(".options").forEach(option => {
+        option.addEventListener('click', (e) => {
+            const chosen = e.target.dataset.option;
+            optionsBox.classList.remove("show");
+            icon.classList.toggle('bi-chevron-down');
+            icon.classList.toggle('bi-chevron-up');
+            dropDownBtn.querySelector('.chosen').textContent = e.target.textContent;
+            console.log(chosen);
+            sortMenu(chosen);
+        });
+
+    })
 });
