@@ -34,9 +34,14 @@ export const addToCart = (e) => {
 }
 
 const showPopUp = (message) => {
+  
+  const mainDiv = document.createElement('div');
+  mainDiv.classList.add('popup-overlay');
 
   const div = document.createElement('div');
   div.classList.add('popup-message');
+  mainDiv.appendChild(div);
+
   const img = document.createElement('img');
   img.src = "../assets/images/check.png";
   img.alt = "check_png";
@@ -55,13 +60,14 @@ const showPopUp = (message) => {
 
   btn.addEventListener('click', () => {
     const popup = document.querySelector('.popup-message');
+    
     popup.style.opacity = '0';
     popup.addEventListener('transitionend', ()=> {
-      document.body.removeChild(popup);
+      document.body.removeChild(mainDiv);
     }) // wait for fade out
   });
 
-  document.body.appendChild(div);
+  document.body.appendChild(mainDiv);
 
   requestAnimationFrame(() => {
     document.querySelector('.popup-message').classList.add('show');
