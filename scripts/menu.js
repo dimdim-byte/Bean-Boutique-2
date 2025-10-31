@@ -1,3 +1,7 @@
+import { addToCart } from './script.js';
+import { toggleInfo } from './script.js';
+
+
 const fetchUrl = "../data/data.json";
 const fetchData = async () => {
     try {
@@ -12,33 +16,17 @@ const fetchData = async () => {
     }
 };
 
-const addToCart = (e) => {
-        const card = e.target.closest('.coffee-card');
-        const name = card.querySelector('h3').textContent;
-        const image = card.querySelector('img').src;
-        const price = parseInt(e.target.dataset.price); 
 
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const existing = cart.find(item => item.name === name);
 
-        if (existing) {
-          existing.quantity += 1;
-        } else {
-          cart.push({ name, image, price, quantity: 1 });
-        }
-
-        localStorage.setItem('cart', JSON.stringify(cart));
-        alert(`${name} added to your cart! 🛒`);
-};
 
 
 const coffeeTemplate = document.getElementById('coffee-template');
 const menuContainer = document.getElementById('coffee-menu');
+const container = document.querySelector('.coffee-container');
 
-const renderMenu = async () => {
-    const data = await fetchData();
-    const container = document.createElement('div');
-    container.classList.add("row", "g-4", "justify-content-center");
+const renderMenu = (data) => {
+   
+    container.innerHTML = "";
 
     data.forEach(element => {
         const clone = coffeeTemplate.content.cloneNode(true);
@@ -54,6 +42,7 @@ const renderMenu = async () => {
         clone.querySelector('.add-to-cart-btn').textContent = "Add to Cart";
         clone.querySelector('.add-to-cart-btn').dataset.price = element.price;
         clone.querySelector('.add-to-cart-btn').addEventListener('click', addToCart);
+        clone.querySelector('.toggle-info').addEventListener('click', toggleInfo);
 
         container.appendChild(clone);
     });
@@ -62,6 +51,59 @@ const renderMenu = async () => {
     
 };
 
+const renderPage = async () => {
+    const data = await fetchData();
+    renderMenu(data);
+}
+
+const sortMenu = async (option) => {
+    const data = await fetchData();
+    switch (option){
+        case 'default':{
+            renderMenu(data);
+            break;
+        }
+        case 'priceLow':{
+            const sorted = [...data].sort((a, b) => a.price - b.price);
+            console.log(sorted);
+            renderMenu(sorted);
+            break;
+        }
+        case 'priceHigh':{
+            const sorted = [...data].sort((a, b) => b.price - a.price);
+            renderMenu(sorted);
+            break;
+        }
+        
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    renderMenu();
+    renderPage();
+
+    const dropDownBtn = document.querySelector(".dropdown-btn");
+    const icon = dropDownBtn.querySelector('i');
+    const optionsBox = document.querySelector(".options-box");
+
+    dropDownBtn.addEventListener('click', () => {
+        
+         requestAnimationFrame(() => {
+            optionsBox.classList.toggle("show");
+        });
+        icon.classList.toggle('bi-chevron-down');
+        icon.classList.toggle('bi-chevron-up');
+    })
+
+    document.querySelectorAll(".options").forEach(option => {
+        option.addEventListener('click', (e) => {
+            const chosen = e.target.dataset.option;
+            optionsBox.classList.remove("show");
+            icon.classList.toggle('bi-chevron-down');
+            icon.classList.toggle('bi-chevron-up');
+            dropDownBtn.querySelector('.chosen').textContent = e.target.textContent;
+            console.log(chosen);
+            sortMenu(chosen);
+        });
+
+    })
 });

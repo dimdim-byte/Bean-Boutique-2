@@ -48,7 +48,17 @@
   <!-- Menu Section -->
    <section id="coffee-menu"  class="container py-5"> 
     <h2 class="menu-title text-center mt-5 mb-5">Explore our delicious coffee blends</h2> 
-    <div class="row g-4 justify-content-center">
+    <div class="custom-dropdown">
+      <div class="sub-dropdown">
+        <div class="dropdown-btn"><span class="chosen">Default</span> <i class="bi bi-chevron-down"></i></div>
+        <div class="options-box">
+            <div class="options" data-option="default">Default</div>
+            <div class="options" data-option="priceLow">Price low to high</div>
+            <div class="options" data-option="priceHigh">Price high to low</div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center coffee-container">
       <!-- Coffee Card -->
        <template id="coffee-template">
           <div class="col-md-4 col-sm-6">
@@ -56,7 +66,7 @@
               <img src="" alt="" class="coffee-img" />
               <h3></h3>
               <p class="coffee-price"></p>
-              <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
+              <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
               <div class="coffee-info">
                 <img src="" alt="" class="bean-img">
                 <p></p>
@@ -73,27 +83,59 @@
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Bean Boutique | All Rights Reserved</p>
-  </footer>
+  <footer class="site-footer position-relative">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#what-we-do">What do we do?</a></li>
+        <li><a href="#stores">Local Retail Stores</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Customer Service</h4>
+      <ul>
+        <li><a href="#hotline">Hot Line</a></li>
+        <li><a href="#report">Report Problem</a></li>
+        <li><a href="#support">24/7 Customer Service</a></li>
+        <li><a href="#help">Help Center</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Our Policies</h4>
+      <ul>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#refunds">Return & Refunds</a></li>
+        <li><a href="#terms">Terms & Conditions</a></li>
+        <li><a href="#shipping">Shipping & Deliveries</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact-icons">
+      <h4>Contact Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="../assets/images/FB.png" alt="Facebook"></a>
+        <a href="#"><img src="../assets/images/Insta.webp" alt="Instagram"></a>
+        <a href="#"><img src="../assets/images/X.png" alt="X"></a>
+      </div>
+    </div>
+  </div>
+
+  
+  <p class="footer-text">&copy; 2025 Bean Boutique | All Rights Reserved</p>
+  
+</footer>
 
   <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Menu Interaction -->
-  <script>
-    $(document).ready(function () {
-      $(".arrow").click(function () {
-        const info = $(this).siblings(".menu-info");
-        info.slideToggle(300);
-        $(this).toggleClass("bi-chevron-down bi-chevron-up");
-      });
-    });
-  </script>
 
 
-  <script src="../scripts/menu.js"></script>
-  <script src="../scripts/script.js"></script>  
+
+  
+  <script src="../scripts/script.js" type="module"></script>
+  <script src="../scripts/menu.js" type="module"></script>  
 </body>
 </html>
