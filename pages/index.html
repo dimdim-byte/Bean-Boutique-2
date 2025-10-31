@@ -32,12 +32,12 @@
 
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav gap-lg-4 text-center">
-          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#coffee-menu">Menu</a></li>
-          <li class="nav-item"><a class="nav-link" href="#equipment">Equipment</a></li>
-          <li class="nav-item"><a class="nav-link" href="#offers">Special Offers</a></li>
-          <li class="nav-item"><a class="nav-link" href="#events">Events & Workshops</a></li>
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
+          <li class="nav-item"><a class="nav-link" href="offers.html">Special Offers</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events & Workshops</a></li>
           <li class="nav-item"><a class="nav-link" href="cart.html"><i class="bi bi-cart3"></i></a></li>
         </ul>
       </div>
@@ -271,7 +271,7 @@
     </div>
   </div>
 
-  <!--Equipment-->
+
    
 
  <!--Menu-->
@@ -285,175 +285,6 @@ searchInput.addEventListener('input', function() {
   });
 });
 </script>
-
-  <section id="equipment" class="container py-5">
-    <h2 class="menu-title text-center mb-5">Our Best-Selling Coffee Equipment</h2>
-    <div class="row g-4 justify-content-center">
-
-    <div class="col-md-4 col-sm-6">
-      <div class="coffee-card" data-name="Coffee Grinder">
-        <img src="../assets/images/CoffeeGrinder.jpg" alt="Coffee Grinder" class="coffee-img" />
-        <h3>Coffee Grinder</h3>
-        <p class="coffee-price">$49.99</p>
-        <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-        <div class="coffee-info">
-          <p>Precision grinding for consistent flavor extraction. Essential for every brewing style.</p>
-          <div class="rating">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-half"></i>
-          </div>
-          <button class="add-to-cart-btn" data-price="49.99">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-md-4 col-sm-6">
-      <div class="coffee-card" data-name="Drip Coffee Maker">
-        <img src="../assets/images/DripCoffeeMakers.jpg" alt="Drip Coffee Maker" class="coffee-img" />
-        <h3>Drip Coffee Maker</h3>
-        <p class="coffee-price">$79.99</p>
-        <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-        <div class="coffee-info">
-          <p>Automatic brewing for smooth, balanced cups every morning.</p>
-          <div class="rating">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star"></i>
-          </div>
-          <button class="add-to-cart-btn" data-price="79.99">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-md-4 col-sm-6">
-      <div class="coffee-card" data-name="Capsule Machine">
-        <img src="../assets/images/CapsuleMachine.jpg" alt="Capsule Machine" class="coffee-img" />
-        <h3>Capsule Machine</h3>
-        <p class="coffee-price">$129.99</p>
-        <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-        <div class="coffee-info">
-          <p>Quick and clean brewing for busy mornings with minimal effort.</p>
-          <div class="rating">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star"></i>
-            <i class="bi bi-star"></i>
-          </div>
-          <button class="add-to-cart-btn" data-price="129.99">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-md-4 col-sm-6">
-      <div class="coffee-card" data-name="Moka Pot">
-        <img src="../assets/images/MokaPot.jpg" alt="Moka Pot" class="coffee-img" />
-        <h3>Moka Pot</h3>
-        <p class="coffee-price">$39.99</p>
-        <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-        <div class="coffee-info">
-          <p>Classic Italian design that delivers bold, stovetop espresso every time.</p>
-          <div class="rating">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-half"></i>
-            <i class="bi bi-star"></i>
-          </div>
-          <button class="add-to-cart-btn" data-price="39.99">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-md-4 col-sm-6">
-      <div class="coffee-card" data-name="Espresso Machine">
-        <img src="../assets/images/Espresso Machine.jpg" alt="Espresso Machine" class="coffee-img" />
-        <h3>Espresso Machine</h3>
-        <p class="coffee-price">$299.99</p>
-        <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-        <div class="coffee-info">
-          <p>Professional-grade pressure system for authentic espresso shots at home.</p>
-          <div class="rating">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star"></i>
-          </div>
-          <button class="add-to-cart-btn" data-price="299.99">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="col-md-4 col-sm-6">
-      <div class="coffee-card" data-name="Coffee Blender">
-        <img src="../assets/images/CoffeeBlender.jpg" alt="Coffee Blender" class="coffee-img" />
-        <h3>Coffee Blender</h3>
-        <p class="coffee-price">$89.99</p>
-        <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-        <div class="coffee-info">
-          <p>Blend your iced coffees, frappes, or cold brews to creamy perfection.</p>
-          <div class="rating">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-half"></i>
-            <i class="bi bi-star"></i>
-            <i class="bi bi-star"></i>
-          </div>
-          <button class="add-to-cart-btn" data-price="89.99">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 col-sm-6">
-      <div class="coffee-card" data-name="Coffee Brew Toddy">
-        <img src="../assets/images/ColdBrewToddy.png" alt="Cold Brew Toddy" class="coffee-img" />
-        <h3>Cold Brew Toddy</h3>
-        <p class="coffee-price">$48.99</p>
-        <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-        <div class="coffee-info">
-          <p>Perfect for smooth, rich cold brew with minimal bitterness.</p>
-          <div class="rating">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star"></i>
-            <i class="bi bi-star"></i>
-          </div>
-          <button class="add-to-cart-btn" data-price="48.99">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-md-4 col-sm-6">
-      <div class="coffee-card" data-name="Pour Over Equipment">
-        <img src="../assets/images/PourOverEquipment.jpg" alt="Pour Over Equipment" class="coffee-img" />
-        <h3>Pour Over Equipment</h3>
-        <p class="coffee-price">$49.95</p>
-        <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-        <div class="coffee-info">
-          <p>Control every pour for a perfectly balanced and aromatic brew.</p>
-          <div class="rating">
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star"></i>
-          </div>
-          <button class="add-to-cart-btn" data-price="49.95">Add to Cart</button>
-        </div>
-      </div>
-    </div>
 
 
 <!--Speical Offers-->
