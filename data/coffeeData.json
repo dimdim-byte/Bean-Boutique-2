@@ -4,146 +4,167 @@
         "description": "Rich and bold espresso with deep caramelized aroma. Best enjoyed with steamed milk or plain.",
         "price": 3.00,
         "image": "../assets/images/Espresso.png",
-        "beanImg": "../assets/images/bean1.png"
+        "beanImg": "../assets/images/bean1.png",
+        "rating": 4.5
     },
     {
         "name": "Mocha",
         "description": "Mocha blends espresso, chocolate, and steamed milk for a smooth, sweet, and creamy experience.",
         "price": 5.50,
         "image": "../assets/images/Mocha.png",
-        "beanImg": "../assets/images/bean2.png"
+        "beanImg": "../assets/images/bean2.png",
+        "rating": 4.0
     },
     {
         "name": "Americano",
         "description": "Espresso diluted with hot water for a mellow, clean taste — perfect for those who love lighter brews.",
         "price": 4.00,
         "image": "../assets/images/Americano.jpg",
-        "beanImg": "../assets/images/bean3.png"
+        "beanImg": "../assets/images/bean3.png",
+        "rating": 3.5
     },
     {
         "name": "Cappuccino",
         "description": "Perfectly balanced espresso, steamed milk, and frothy foam — a creamy classic.",
         "price": 4.50,
         "image": "../assets/images/Cappuccino.png",
-        "beanImg": "../assets/images/bean4.png"
+        "beanImg": "../assets/images/bean4.png",
+        "rating": 5
     },
     {
         "name": "Latte",
         "description": "A smooth mix of espresso and steamed milk topped with light foam — mild and comforting.",
         "price": 5.00,
         "image": "../assets/images/Latte.png",
-        "beanImg": "../assets/images/bean5.png"
+        "beanImg": "../assets/images/bean5.png",
+        "rating": 4.5
     },
     {
         "name": "Macchiato",
         "description": "Espresso “marked” with milk foam — bold flavor with a touch of creaminess.",
         "price": 3.50,
         "image": "../assets/images/Macchiato.jpg",
-        "beanImg": "../assets/images/bean6.jpg"
+        "beanImg": "../assets/images/bean6.jpg",
+        "rating": 3.5
     },
     {
         "name": "Vienna",
         "description": "A delightful mix of espresso topped with whipped cream.",
         "price": 4.20,
         "image": "../assets/images/Vienna.jpg",
-        "beanImg": "../assets/images/bean3.png"
+        "beanImg": "../assets/images/bean3.png",
+        "rating": 4.0
     },
     {
         "name": "White Coffee",
         "description": "Smooth and light-bodied coffee brewed with lightly roasted beans.",
         "price": 3.80,
         "image": "../assets/images/White_coffee.jpg",
-        "beanImg": "../assets/images/bean5.png"
+        "beanImg": "../assets/images/bean5.png",
+        "rating": 3.5
     },
     {
         "name": "Espresso",
         "description": "Strong, rich, concentrated coffee shot that defines bold flavor.",
         "price": 2.90,
         "image": "../assets/images/Espresso.jpg",
-        "beanImg": "../assets/images/bean1.png"
+        "beanImg": "../assets/images/bean1.png",
+        "rating": 4.5
     },
     {
         "name": "Drip Coffee",
         "description": "Classic brewed coffee with a balanced and smooth profile.",
         "price": 3.00,
         "image": "../assets/images/Drip_coffee.jpg",
-        "beanImg": "../assets/images/bean4.png"
+        "beanImg": "../assets/images/bean4.png",
+        "rating": 4.0
     },
     {
         "name": "Black Eye",
         "description": "Drip coffee with a double shot of espresso — strong & intense.",
         "price": 4.50,
         "image": "../assets/images/Black_Eye.jpg",
-        "beanImg": "../assets/images/bean2.png"
+        "beanImg": "../assets/images/bean2.png",
+        "rating": 4.5
     },
     {
         "name": "Red Eye",
         "description": "Drip coffee boosted with a single shot of espresso for extra kick.",
         "price": 4.10,
         "image": "../assets/images/Red_Eye.jpg",
-        "beanImg": "../assets/images/bean6.jpg"
+        "beanImg": "../assets/images/bean6.jpg",
+        "rating": 3.5
     },
     {
         "name": "Cafe au Lait",
         "description": "Brewed coffee mixed with steamed milk for a creamy balance.",
         "price": 3.60,
         "image": "../assets/images/Cafe_au_Lait.jpg",
-        "beanImg": "../assets/images/bean3.png"
+        "beanImg": "../assets/images/bean3.png",
+        "rating": 4.0
     },
     {
         "name": "Turkish Coffee",
         "description": "Finely ground coffee boiled with strong, deep aromatic flavor.",
         "price": 3.90,
         "image": "../assets/images/Turkish_Coffee.jpg",
-        "beanImg": "../assets/images/bean5.png"
+        "beanImg": "../assets/images/bean5.png",
+        "rating": 4.5
     },
     {
         "name": "Lungo",
         "description": "A longer espresso extraction with a smooth yet bold aftertaste.",
         "price": 3.20,
         "image": "../assets/images/Lungo.jpg",
-        "beanImg": "../assets/images/bean2.png"
+        "beanImg": "../assets/images/bean2.png",
+        "rating": 3.5
     },
     {
         "name": "Ristretto",
         "description": "A short, more concentrated espresso shot with intense richness.",
         "price": 3.10,
         "image": "../assets/images/Ristretto.jpg",
-        "beanImg": "../assets/images/bean1.png"
+        "beanImg": "../assets/images/bean1.png",
+        "rating": 4.0
     },
     {
         "name": "Cortado",
         "description": "Equal parts espresso and warm milk, perfectly balanced.",
         "price": 3.70,
         "image": "../assets/images/Cortado.jpg",
-        "beanImg": "../assets/images/bean4.png"
+        "beanImg": "../assets/images/bean4.png",
+        "rating": 3.5
     },
     {
         "name": "Affogato",
         "description": "Vanilla ice cream drowned in a shot of hot espresso.",
         "price": 4.80,
         "image": "../assets/images/Affogato.jpg",
-        "beanImg": "../assets/images/bean6.jpg"
+        "beanImg": "../assets/images/bean6.jpg",
+        "rating": 5
     },
     {
         "name": "Flat White",
         "description": "Velvety textured milk blended with a strong espresso base.",
         "price": 4.00,
         "image": "../assets/images/Flat_white.jpg",
-        "beanImg": "../assets/images/bean2.png"
+        "beanImg": "../assets/images/bean2.png",
+        "rating": 4.0
     },
     {
         "name": "Iced Latte",
         "description": "Chilled coffee and milk with ice — refreshing and smooth.",
         "price": 4.30,
         "image": "../assets/images/iced_latte.jpg",
-        "beanImg": "../assets/images/bean5.png"
+        "beanImg": "../assets/images/bean5.png",
+        "rating": 4.5
     },
     {
         "name": "Irish Coffee",
         "description": "Hot coffee with Irish whiskey, brown sugar, and cream topping.",
         "price": 5.50,
         "image": "../assets/images/Irish_coffee.jpg",
-        "beanImg": "../assets/images/bean3.png"
+        "beanImg": "../assets/images/bean3.png",
+        "rating": 4.5
     }
 ]

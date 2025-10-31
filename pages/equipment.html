@@ -20,7 +20,7 @@
     <div class="container-fluid px-4">
       
       <a class="navbar-brand d-flex align-items-center" href="#home">
-        <img src="../assets/images/minimalist-coffee-logo-on-a-white-background-vector.png" alt="Bean Boutique Logo" class="logo me-2" />
+        <img src="../../assets/images/minimalist-coffee-logo-on-a-white-background-vector.png" alt="Bean Boutique Logo" class="logo me-2" />
         <span class="brand-name">Bean Boutique</span>
       </a>
 
@@ -46,138 +46,41 @@
     </div>
   </nav>
 </header>
-
-  <section id="equipment" class="container py-5" style="margin-top: 100px;">
-    <h2 class="menu-title text-center mb-5">Our Best-Selling Coffee Equipment</h2>
-    <div class="row g-4 justify-content-center">
-
-      <div class="col-md-4 col-sm-6">
-        <div class="coffee-card" data-name="Coffee Grinder">
-          <img src="assets/images/CoffeeGrinder.jpg" alt="Coffee Grinder equipment photo" class="coffee-img" />
-          <h3>Coffee Grinder</h3>
-          <p class="coffee-price">$49.99</p>
-          <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-          <div class="coffee-info">
-            <p>Precision grinding for consistent flavor extraction. Essential for every brewing style.</p>
-            <div class="rating">
-              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-            </div>
-            <button class="add-to-cart-btn" data-price="49.99">Add to Cart</button>
-          </div>
+  <section id="equipmentMenu"  class="container py-5"> 
+    <h2 class="menu-title text-center mt-5 mb-5">Our Best-Selling Coffee Equipment</h2> 
+    <div class="custom-dropdown">
+      <div class="sub-dropdown">
+        <div class="dropdown-btn"><span class="chosen">Default</span> <i class="bi bi-chevron-down"></i></div>
+        <div class="options-box">
+            <div class="options" data-option="default">Default</div>
+            <div class="options" data-option="priceLow">Price low to high</div>
+            <div class="options" data-option="priceHigh">Price high to low</div>
         </div>
       </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="coffee-card" data-name="Drip Coffee Maker">
-          <img src="assets/images/DripCoffeeMakers.jpg" alt="Drip Coffee Maker equipment photo" class="coffee-img" />
-          <h3>Drip Coffee Maker</h3>
-          <p class="coffee-price">$79.99</p>
-          <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-          <div class="coffee-info">
-            <p>Automatic brewing for smooth, balanced cups every morning.</p>
-            <div class="rating">
-              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+    </div>
+    <div class="row g-4 justify-content-center equipment-container">
+     
+       <template id="equipment-template">
+          <div class="col-md-4 col-sm-6">
+            <div class="coffee-card" data-name="">
+              <img src="" alt="" class="coffee-img" />
+              <h3></h3>
+              <p class="coffee-price"></p>
+              <button class="toggle-info"><i class="bi bi-chevron-down"></i></button>
+              <div class="coffee-info">
+                <img src="" alt="" class="bean-img">
+                <p></p>
+                <div class="rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                </div>
+                <button class="add-to-cart-btn"">Add to Cart</button>
+              </div>
             </div>
-            <button class="add-to-cart-btn" data-price="79.99">Add to Cart</button>
           </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="coffee-card" data-name="Capsule Machine">
-          <img src="assets/images/CapsuleMachine.jpg" alt="Capsule Machine equipment photo" class="coffee-img" />
-          <h3>Capsule Machine</h3>
-          <p class="coffee-price">$129.99</p>
-          <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-          <div class="coffee-info">
-            <p>Quick and clean brewing for busy mornings with minimal effort.</p>
-            <div class="rating">
-              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-            </div>
-            <button class="add-to-cart-btn" data-price="129.99">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="coffee-card" data-name="Moka Pot">
-          <img src="assets/images/MokaPot.jpg" alt="Moka Pot coffee equipment photo" class="coffee-img" />
-          <h3>Moka Pot</h3>
-          <p class="coffee-price">$39.99</p>
-          <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-          <div class="coffee-info">
-            <p>Classic Italian design that delivers bold, stovetop espresso every time.</p>
-            <div class="rating">
-              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>
-            </div>
-            <button class="add-to-cart-btn" data-price="39.99">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="coffee-card" data-name="Espresso Machine">
-          <img src="assets/images/EspressoMachine.jpg" alt="Espresso Machine coffee equipment photo" class="coffee-img" />
-          <h3>Espresso Machine</h3>
-          <p class="coffee-price">$299.99</p>
-          <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-          <div class="coffee-info">
-            <p>Professional-grade pressure system for authentic espresso shots at home.</p>
-            <div class="rating">
-              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-            </div>
-            <button class="add-to-cart-btn" data-price="299.99">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="coffee-card" data-name="Coffee Blender">
-          <img src="assets/images/CoffeeBlender.jpg" alt="Coffee Blender photo" class="coffee-img" />
-          <h3>Coffee Blender</h3>
-          <p class="coffee-price">$89.99</p>
-          <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-          <div class="coffee-info">
-            <p>Blend your iced coffees, frappes, or cold brews to creamy perfection.</p>
-            <div class="rating">
-              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-            </div>
-            <button class="add-to-cart-btn" data-price="89.99">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="coffee-card" data-name="Cold Brew Toddy">
-          <img src="assets/images/ColdBrewToddy.png" alt="Cold Brew Toddy coffee equipment photo" class="coffee-img" />
-          <h3>Cold Brew Toddy</h3>
-          <p class="coffee-price">$48.99</p>
-          <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-          <div class="coffee-info">
-            <p>Perfect for smooth, rich cold brew with minimal bitterness.</p>
-            <div class="rating">
-              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
-            </div>
-            <button class="add-to-cart-btn" data-price="48.99">Add to Cart</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-4 col-sm-6">
-        <div class="coffee-card" data-name="Pour Over Equipment">
-          <img src="assets/images/PourOverEquipment.jpg" alt="Pour Over coffee equipment photo" class="coffee-img" />
-          <h3>Pour Over Equipment</h3>
-          <p class="coffee-price">$49.95</p>
-          <button class="toggle-info" onclick="toggleInfo(event)"><i class="bi bi-chevron-down"></i></button>
-          <div class="coffee-info">
-            <p>Control every pour for a perfectly balanced and aromatic brew.</p>
-            <div class="rating">
-              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-            </div>
-            <button class="add-to-cart-btn" data-price="49.95">Add to Cart</button>
-          </div>
-        </div>
-      </div>
+       </template>
+    
+      
+ 
 
     </div>
   </section>
@@ -227,6 +130,7 @@
 </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
+  <script src="../scripts/script.js" type="module"></script>
+  <script src="../scripts/equipment.js" type="module"></script>
 </body>
 </html>

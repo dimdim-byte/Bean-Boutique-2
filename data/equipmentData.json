@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Coffee Grinder",
+        "description": "Precision grinding for consistent flavor extraction. Essential for every brewing style.",
+        "price": 49.99,
+        "image": "../assets/images/CoffeeGrinder.jpg",
+        "rating": 4.5
+    },
+    {
+        "name": "Drip Coffee Maker",
+        "description": "Automatic brewing for smooth, balanced cups every morning.",
+        "price": 79.99,
+        "image": "../assets/images/DripCoffeeMakers.jpg",
+        "rating": 4.0
+    },
+    {
+        "name": "Capsule Machine",
+        "description": "Quick and clean brewing for busy mornings with minimal effort.",
+        "price": 129.99,
+        "image": "../assets/images/CapsuleMachine.jpg",
+        "rating": 3.0
+    },
+    {
+        "name": "Moka Pot",
+        "description": "Classic Italian design that delivers bold, stovetop espresso every time.",
+        "price": 39.99,
+        "image": "../assets/images/MokaPot.jpg",
+        "rating": 3.5
+    },
+    {
+        "name": "Espresso Machine",
+        "description": "Professional-grade pressure system for authentic espresso shots at home.",
+        "price": 299.99,
+        "image": "../assets/images/Espresso Machine.jpg",
+        "rating": 4.0
+    },
+    {
+        "name": "Coffee Blender",
+        "description": "Blend your iced coffees, frappes, or cold brews to creamy perfection.",
+        "price": 89.99,
+        "image": "../assets/images/CoffeeBlender.jpg",
+        "rating": 2.5
+    },
+    {
+        "name": "Cold Brew Toddy",
+        "description": "Perfect for smooth, rich cold brew with minimal bitterness.",
+        "price": 48.99,
+        "image": "../assets/images/ColdBrewToddy.png",
+        "rating": 3.0
+    },
+    {
+        "name": "Pour Over Equipment",
+        "description": "Control every pour for a perfectly balanced and aromatic brew.",
+        "price": 49.95,
+        "image": "../assets/images/PourOverEquipment.jpg",
+        "rating": 4.0
+    }
+]

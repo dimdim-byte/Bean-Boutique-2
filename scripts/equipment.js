@@ -3,18 +3,18 @@ import {cloneCardTemplate} from './script.js'
 import { sortMenu } from './script.js';
 import { dropDownClose } from './script.js';
 
-const fetchUrl = '../data/coffeeData.json';
+const fetchUrl = '../data/equipmentData.json';
 
-const coffeeTemplate = document.getElementById('coffee-template');
+const equipmentTemplate = document.getElementById('equipment-template');
 const menuContainer = document.getElementById('equipmentMenu');
-const container = document.querySelector('.coffee-container');
+const container = document.querySelector('.equipment-container');
 
 const renderMenu = (data) => {
    
     container.innerHTML = "";
     
     data.forEach(element => {  
-        const clone = coffeeTemplate.content.cloneNode(true);
+        const clone = equipmentTemplate.content.cloneNode(true);
         const cloneNode = cloneCardTemplate(clone, element);
         container.appendChild(cloneNode);
     });
@@ -22,6 +22,7 @@ const renderMenu = (data) => {
     menuContainer.appendChild(container);
     
 };
+
 const renderPage = async () => {
     const data = await fetchData(fetchUrl);
     renderMenu(data);

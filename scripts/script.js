@@ -73,3 +73,86 @@ const showPopUp = (message) => {
     document.querySelector('.popup-message').classList.add('show');
   });
 }
+
+export const fetchData = async (url) => {
+    try {
+        const res = await fetch(url);
+        if (!res.ok){
+            throw new Error("Failed to load resources");
+        }
+        const data = await res.json();
+        console.log(data)
+        return data;
+    } catch (e){
+        console.log(e)
+    }
+};
+
+
+
+const ratings = {
+  1: `<i class="bi bi-star-fill"><i class="bi bi-star"><i class="bi bi-star"><i class="bi bi-star"><i class="bi bi-star">`,
+  1.5: `<i class="bi bi-star-fill"><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`,
+  2: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`,
+  2.5: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`,
+  3: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`,
+  3.5: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>`,
+  4: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>`,
+  4.5: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>`,
+  5: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>`
+}
+
+export const cloneCardTemplate = (clone, element) => {
+    clone.querySelector('.coffee-img').src = element.image;
+    clone.querySelector('.coffee-img').alt = element.name;
+    clone.querySelector('h3').textContent = element.name;
+    clone.querySelector('.coffee-price').textContent = `$${element.price.toFixed(2)}`;
+    clone.querySelector('.coffee-card').setAttribute('data-name', element.name);
+    if (element.beanImg){
+      clone.querySelector('.bean-img').src = element.beanImg;
+      clone.querySelector('.bean-img').alt = `${element.name} Bean`;
+    } else {
+      clone.querySelector('.bean-img').style.display = "none";
+    }
+    
+    clone.querySelector('.coffee-info p').textContent = element.description;
+    clone.querySelector('.rating').innerHtml = ratings[element.rating];
+    clone.querySelector('.add-to-cart-btn').textContent = "Add to Cart";
+    clone.querySelector('.add-to-cart-btn').dataset.price = element.price;
+    clone.querySelector('.add-to-cart-btn').addEventListener('click', addToCart);
+    clone.querySelector('.toggle-info').addEventListener('click', toggleInfo);
+
+    return clone;
+}
+
+export const sortMenu = async (url, option, reRender) => {
+    const data = await fetchData(url);
+    switch (option){
+        case 'default':{
+            reRender(data);
+            break;
+        }
+        case 'priceLow':{
+            const sorted = [...data].sort((a, b) => a.price - b.price);
+            console.log(sorted);
+            reRender(sorted);
+            break;
+        }
+        case 'priceHigh':{
+            const sorted = [...data].sort((a, b) => b.price - a.price);
+            reRender(sorted);
+            break;
+        }
+        
+    }
+}
+
+export const dropDownClose = (e) => {
+    const dropDownBtn = document.querySelector(".dropdown-btn");
+    const icon = dropDownBtn.querySelector('i');
+    const optionsBox = document.querySelector(".options-box");
+    optionsBox.classList.remove("show");
+    icon.classList.toggle('bi-chevron-down');
+    icon.classList.toggle('bi-chevron-up');
+    dropDownBtn.querySelector('.chosen').textContent = e.target.textContent;
+}
