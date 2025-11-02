@@ -50,11 +50,18 @@
     <h2 class="menu-title text-center mt-5 mb-5">Explore our delicious coffee blends</h2> 
     <div class="custom-dropdown">
       <div class="sub-dropdown">
+        <div  class="product-search-container">
+          <input type="text" class="product-search" id="searchInput" placeholder="Search coffee">
+          <button id="searchBtn"><img src="../assets/images/search-interface-symbol.png" alt="search icon"></button>
+        </div>
+        <div class="sub-dropdown2">
         <div class="dropdown-btn"><span class="chosen">Default</span> <i class="bi bi-chevron-down"></i></div>
         <div class="options-box">
             <div class="options" data-option="default">Default</div>
             <div class="options" data-option="priceLow">Price low to high</div>
             <div class="options" data-option="priceHigh">Price high to low</div>
+            <div class="options" data-option="popularity">Popularity</div>
+        </div>
         </div>
       </div>
     </div>
@@ -71,7 +78,6 @@
                 <img src="" alt="" class="bean-img">
                 <p></p>
                 <div class="rating">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
                 </div>
                 <button class="add-to-cart-btn"">Add to Cart</button>
               </div>

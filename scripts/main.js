@@ -57,11 +57,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target === modal) modal.style.display = 'none';
   });
 
-  $('a[href^="#"]').on('click', function(e) {
-    e.preventDefault();
-    const target = this.hash;
-    $('html, body').animate({ scrollTop: $(target).offset().top - 80 }, 700);
-  });
+  // $('a[href^="#"]').on('click', function(e) {
+  //   e.preventDefault();
+  //   const target = this.hash;
+  //   $('html, body').animate({ scrollTop: $(target).offset().top - 80 }, 700);
+  // });
 });
 
 document.getElementById('orderNowBtn').addEventListener('click', () => {

@@ -5,7 +5,8 @@
         "price": 3.00,
         "image": "../assets/images/Espresso.png",
         "beanImg": "../assets/images/bean1.png",
-        "rating": 4.5
+        "rating": 4.5,
+        "category": "coffee"
     },
     {
         "name": "Mocha",
@@ -13,7 +14,9 @@
         "price": 5.50,
         "image": "../assets/images/Mocha.png",
         "beanImg": "../assets/images/bean2.png",
-        "rating": 4.0
+        "rating": 4.0,
+        "category": "coffee"
+
     },
     {
         "name": "Americano",
@@ -21,7 +24,8 @@
         "price": 4.00,
         "image": "../assets/images/Americano.jpg",
         "beanImg": "../assets/images/bean3.png",
-        "rating": 3.5
+        "rating": 3.5,
+        "category": "coffee"
     },
     {
         "name": "Cappuccino",
@@ -29,7 +33,8 @@
         "price": 4.50,
         "image": "../assets/images/Cappuccino.png",
         "beanImg": "../assets/images/bean4.png",
-        "rating": 5
+        "rating": 5,
+        "category": "coffee"
     },
     {
         "name": "Latte",
@@ -37,7 +42,8 @@
         "price": 5.00,
         "image": "../assets/images/Latte.png",
         "beanImg": "../assets/images/bean5.png",
-        "rating": 4.5
+        "rating": 4.5,
+        "category": "coffee"
     },
     {
         "name": "Macchiato",
@@ -45,7 +51,8 @@
         "price": 3.50,
         "image": "../assets/images/Macchiato.jpg",
         "beanImg": "../assets/images/bean6.jpg",
-        "rating": 3.5
+        "rating": 3.5,
+        "category": "coffee"
     },
     {
         "name": "Vienna",
@@ -53,7 +60,8 @@
         "price": 4.20,
         "image": "../assets/images/Vienna.jpg",
         "beanImg": "../assets/images/bean3.png",
-        "rating": 4.0
+        "rating": 4.0,
+        "category": "coffee"
     },
     {
         "name": "White Coffee",
@@ -61,15 +69,17 @@
         "price": 3.80,
         "image": "../assets/images/White_coffee.jpg",
         "beanImg": "../assets/images/bean5.png",
-        "rating": 3.5
+        "rating": 3.5,
+        "category": "coffee"
     },
     {
-        "name": "Espresso",
+        "name": "Iced Espresso",
         "description": "Strong, rich, concentrated coffee shot that defines bold flavor.",
         "price": 2.90,
         "image": "../assets/images/Espresso.jpg",
         "beanImg": "../assets/images/bean1.png",
-        "rating": 4.5
+        "rating": 4.5,
+        "category": "coffee"
     },
     {
         "name": "Drip Coffee",
@@ -77,7 +87,8 @@
         "price": 3.00,
         "image": "../assets/images/Drip_coffee.jpg",
         "beanImg": "../assets/images/bean4.png",
-        "rating": 4.0
+        "rating": 4.0,
+        "category": "coffee"
     },
     {
         "name": "Black Eye",
@@ -85,7 +96,8 @@
         "price": 4.50,
         "image": "../assets/images/Black_Eye.jpg",
         "beanImg": "../assets/images/bean2.png",
-        "rating": 4.5
+        "rating": 4.5,
+        "category": "coffee"
     },
     {
         "name": "Red Eye",
@@ -93,7 +105,8 @@
         "price": 4.10,
         "image": "../assets/images/Red_Eye.jpg",
         "beanImg": "../assets/images/bean6.jpg",
-        "rating": 3.5
+        "rating": 3.5,
+        "category": "coffee"
     },
     {
         "name": "Cafe au Lait",
@@ -101,7 +114,8 @@
         "price": 3.60,
         "image": "../assets/images/Cafe_au_Lait.jpg",
         "beanImg": "../assets/images/bean3.png",
-        "rating": 4.0
+        "rating": 4.0,
+        "category": "coffee"
     },
     {
         "name": "Turkish Coffee",
@@ -109,7 +123,8 @@
         "price": 3.90,
         "image": "../assets/images/Turkish_Coffee.jpg",
         "beanImg": "../assets/images/bean5.png",
-        "rating": 4.5
+        "rating": 4.5,
+        "category": "coffee"
     },
     {
         "name": "Lungo",
@@ -117,7 +132,8 @@
         "price": 3.20,
         "image": "../assets/images/Lungo.jpg",
         "beanImg": "../assets/images/bean2.png",
-        "rating": 3.5
+        "rating": 3.5,
+        "category": "coffee"
     },
     {
         "name": "Ristretto",
@@ -125,7 +141,8 @@
         "price": 3.10,
         "image": "../assets/images/Ristretto.jpg",
         "beanImg": "../assets/images/bean1.png",
-        "rating": 4.0
+        "rating": 4.0,
+        "category": "coffee"
     },
     {
         "name": "Cortado",
@@ -133,7 +150,8 @@
         "price": 3.70,
         "image": "../assets/images/Cortado.jpg",
         "beanImg": "../assets/images/bean4.png",
-        "rating": 3.5
+        "rating": 3.5,
+        "category": "coffee"
     },
     {
         "name": "Affogato",
@@ -141,7 +159,8 @@
         "price": 4.80,
         "image": "../assets/images/Affogato.jpg",
         "beanImg": "../assets/images/bean6.jpg",
-        "rating": 5
+        "rating": 5,
+        "category": "coffee"
     },
     {
         "name": "Flat White",
@@ -149,7 +168,8 @@
         "price": 4.00,
         "image": "../assets/images/Flat_white.jpg",
         "beanImg": "../assets/images/bean2.png",
-        "rating": 4.0
+        "rating": 4.0,
+        "category": "coffee"
     },
     {
         "name": "Iced Latte",
@@ -157,7 +177,8 @@
         "price": 4.30,
         "image": "../assets/images/iced_latte.jpg",
         "beanImg": "../assets/images/bean5.png",
-        "rating": 4.5
+        "rating": 4.5,
+        "category": "coffee"
     },
     {
         "name": "Irish Coffee",
@@ -165,6 +186,7 @@
         "price": 5.50,
         "image": "../assets/images/Irish_coffee.jpg",
         "beanImg": "../assets/images/bean3.png",
-        "rating": 4.5
+        "rating": 4.5,
+        "category": "coffee"
     }
 ]

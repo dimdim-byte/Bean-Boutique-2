@@ -91,16 +91,17 @@ export const fetchData = async (url) => {
 
 
 const ratings = {
-  1: `<i class="bi bi-star-fill"><i class="bi bi-star"><i class="bi bi-star"><i class="bi bi-star"><i class="bi bi-star">`,
-  1.5: `<i class="bi bi-star-fill"><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`,
-  2: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`,
-  2.5: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`,
-  3: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`,
-  3.5: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>`,
-  4: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>`,
-  4.5: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>`,
-  5: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>`
-}
+  1: '<i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>',
+  1.5: '<i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>',
+  2: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>',
+  2.5: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>',
+  3: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>',
+  3.5: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>',
+  4: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>',
+  4.5: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>',
+  5: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>'
+};
+
 
 export const cloneCardTemplate = (clone, element) => {
     clone.querySelector('.coffee-img').src = element.image;
@@ -116,7 +117,7 @@ export const cloneCardTemplate = (clone, element) => {
     }
     
     clone.querySelector('.coffee-info p').textContent = element.description;
-    clone.querySelector('.rating').innerHtml = ratings[element.rating];
+    clone.querySelector('.rating').innerHTML = ratings[element.rating];
     clone.querySelector('.add-to-cart-btn').textContent = "Add to Cart";
     clone.querySelector('.add-to-cart-btn').dataset.price = element.price;
     clone.querySelector('.add-to-cart-btn').addEventListener('click', addToCart);
@@ -142,6 +143,12 @@ export const sortMenu = async (url, option, reRender) => {
             const sorted = [...data].sort((a, b) => b.price - a.price);
             reRender(sorted);
             break;
+        }
+        case 'popularity':{
+            const sorted = [...data].sort((a, b) => b.rating - a.rating);
+              reRender(sorted);
+              console.log(sorted);
+              break;
         }
         
     }
