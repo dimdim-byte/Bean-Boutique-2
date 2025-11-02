@@ -126,8 +126,7 @@ export const cloneCardTemplate = (clone, element) => {
     return clone;
 }
 
-export const sortMenu = async (url, option, reRender) => {
-    const data = await fetchData(url);
+export const sortMenu = (data, option, reRender,) => {
     switch (option){
         case 'default':{
             reRender(data);
@@ -162,4 +161,22 @@ export const dropDownClose = (e) => {
     icon.classList.toggle('bi-chevron-down');
     icon.classList.toggle('bi-chevron-up');
     dropDownBtn.querySelector('.chosen').textContent = e.target.textContent;
+}
+
+export const search = (data, search) => {
+  const filtered = [...data].map(item => {
+        item.score = 0;
+        search.split(" ").forEach(s => {
+            switch (true){
+
+            case s === item.name.toLowerCase():
+                item.score += 20;
+            case item.name.toLowerCase().includes(s):
+                item.score += 10;   
+        }
+        })
+
+        return item;
+    }).filter(item => item.score >= 10).sort((a, b) => b.score - a.score)
+    return filtered;
 }

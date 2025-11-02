@@ -2,12 +2,15 @@ import {fetchData } from './script.js';
 import {cloneCardTemplate} from './script.js'
 import { sortMenu } from './script.js';
 import { dropDownClose } from './script.js';
+import { search } from './script.js';
 
 const fetchUrl = '../data/coffeeData.json';
 
 const coffeeTemplate = document.getElementById('coffee-template');
 const menuContainer = document.getElementById('coffee-menu');
 const container = document.querySelector('.coffee-container');
+
+let menuData = [];
 
 const renderMenu = (data) => {
    
@@ -25,6 +28,8 @@ const renderMenu = (data) => {
 const renderPage = async () => {
     const data = await fetchData(fetchUrl);
     renderMenu(data);
+    menuData = data;
+    console.log(menuData)
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -47,32 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
         option.addEventListener('click', (e) => {
             dropDownClose(e);
             const chosen = e.target.dataset.option;
-            sortMenu(fetchUrl, chosen, renderMenu);
+            sortMenu(menuData, chosen, renderMenu);
         });
 
     })
+
+    document.getElementById("searchBtn").addEventListener('click', () => {
+        const searchTarget = document.getElementById("searchInput").value.toLowerCase().trim();
+        const filtered = search(menuData, searchTarget);
+        renderMenu(filtered);
+    })
 });
 
-document.getElementById("searchBtn").addEventListener('click', async (e) => {
-    const search =document.getElementById("searchInput").value.toLowerCase().trim();
-    const data = await fetchData(fetchUrl);
-
-    const filtered = [...data].map(item => {
-        item.score = 0;
-        search.split(" ").forEach(s => {
-            switch (true){
-            
-            case s === item.name.toLowerCase():
-                item.score += 20;
-            case item.category.includes(s):
-                item.score += 5;
-            case item.name.toLowerCase().includes(s):
-                item.score += 10;   
-        }
-        })
-
-        return item;
-    }).filter(item => item.score > 0).sort((a, b) => b.score - a.score).splice(0, 10)
-    console.log(filtered);
-    renderMenu(filtered);
-})

@@ -2,12 +2,15 @@ import {fetchData } from './script.js';
 import {cloneCardTemplate} from './script.js'
 import { sortMenu } from './script.js';
 import { dropDownClose } from './script.js';
+import { search } from './script.js';
 
 const fetchUrl = '../data/equipmentData.json';
 
 const equipmentTemplate = document.getElementById('equipment-template');
 const menuContainer = document.getElementById('equipmentMenu');
 const container = document.querySelector('.equipment-container');
+
+let equipmentData = [];
 
 const renderMenu = (data) => {
    
@@ -26,6 +29,7 @@ const renderMenu = (data) => {
 const renderPage = async () => {
     const data = await fetchData(fetchUrl);
     renderMenu(data);
+    equipmentData = data;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -48,8 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
         option.addEventListener('click', (e) => {
             dropDownClose(e);
             const chosen = e.target.dataset.option;
-            sortMenu(fetchUrl, chosen, renderMenu);
+            sortMenu(equipmentData, chosen, renderMenu);
         });
 
+    })
+
+    document.getElementById("searchBtn").addEventListener('click', () => {
+            const searchTarget = document.getElementById("searchInput").value.toLowerCase().trim();
+            const filtered = search(equipmentData, searchTarget);
+            renderMenu(filtered);
     })
 });
