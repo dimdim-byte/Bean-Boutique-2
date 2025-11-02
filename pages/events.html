@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events & Workshops - Bean Boutique</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../style/beancoffee.css" />
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="main-header">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0,0,0,0.3); backdrop-filter: blur(6px);">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="../../assets/images/minimalist-coffee-logo-on-a-white-background-vector.png" alt="Bean Boutique Logo" class="logo me-2" />
+          <span class="brand-name">Bean Boutique</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav gap-lg-4 text-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+            <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
+            <li class="nav-item"><a class="nav-link" href="offers.html">Special Offers</a></li>
+            <li class="nav-item"><a class="nav-link active" href="events.html">Events & Workshops</a></li>
+            <li class="nav-item"><a class="nav-link" href="cart.html"><i class="bi bi-cart3"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+    <!--Events and Workshops-->
+  <section id="events" class="events-section py-5">
+    <div class="container text-center">
+      <h2 class="events-title mb-4">Check out for upcoming events and Register Now!</h2>
+
+      <div class="row justify-content-center g-4 mb-4">
+        <div class="col-md-4 col-sm-6"><img src="../assets/images/EW1.png" alt="Workshop" class="event-img img-fluid rounded shadow"></div>
+        <div class="col-md-4 col-sm-6"><img src="../assets/images/EW2.png" alt="Coffee Expo" class="event-img img-fluid rounded shadow"></div>
+        <div class="col-md-4 col-sm-6"><img src="../assets/images/EW3.png" alt="Latte Art Class" class="event-img img-fluid rounded shadow"></div>
+      </div>
+
+      <div class="event-details d-flex flex-column flex-md-row align-items-center justify-content-center gap-4 px-3">
+        <button class="register-btn">Register</button>
+        <p class="event-text text-start">
+          Join our exclusive events and workshops designed for coffee lovers and creative minds alike. Learn the art of perfect brewing, explore latte design, and connect with fellow enthusiasts in a cozy, inspiring atmosphere. Don’t miss your chance to sip, learn, and share the passion — spots fill up fast!
+      </div>
+    </div>
+  </section>
+
+  <!--Registration-->
+  <div id="registrationModal" class="modal-overlay">
+    <div class="modal-content">
+      <span class="modal-close-btn">&times;</span>
+      <h2>Registration Form</h2>
+      <form class="registration-form mt-3">
+        <label>First Name:</label>
+        <input type="text" required>
+        <label>Last Name:</label>
+        <input type="text" required>
+        <label>Email:</label>
+        <input type="email" required>
+        <label>Contact:</label>
+        <input type="tel" required>
+        <label>Address:</label>
+        <input type="text" required>
+        <label>Gender:</label>
+        <input type="text" required>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer position-relative">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#what-we-do">What do we do?</a></li>
+        <li><a href="#stores">Local Retail Stores</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Customer Service</h4>
+      <ul>
+        <li><a href="#hotline">Hot Line</a></li>
+        <li><a href="#report">Report Problem</a></li>
+        <li><a href="#support">24/7 Customer Service</a></li>
+        <li><a href="#help">Help Center</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Our Policies</h4>
+      <ul>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#refunds">Return & Refunds</a></li>
+        <li><a href="#terms">Terms & Conditions</a></li>
+        <li><a href="#shipping">Shipping & Deliveries</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact-icons">
+      <h4>Contact Us</h4>
+      <div class="social-icons">
+        <a href="#"><img src="../assets/images/FB.png" alt="Facebook"></a>
+        <a href="#"><img src="../assets/images/Insta.webp" alt="Instagram"></a>
+        <a href="#"><img src="../assets/images/X.png" alt="X"></a>
+      </div>
+    </div>
+  </div>
+
+  
+  <p class="footer-text">&copy; 2025 Bean Boutique | All Rights Reserved</p>
+  
+</footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Scripts -->
+  <script src="../scripts/script.js" type="module"></script>
+</body>
+</html>

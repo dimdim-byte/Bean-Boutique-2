@@ -1200,3 +1200,75 @@ header.main-header {
   visibility: visible;
   max-height: 500px;
 }
+
+/* ====== FIX FOOTER POSITION ====== */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription-section {
+  flex: 1; /* pushes footer down */
+}
+
+.site-footer {
+  background-color: #7b4f2d;
+  color: #d3c4a0;
+  padding: 40px 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+.footer-text {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #c9b58a;
+}
+
+/* ====== FIX FOOTER POSITION ====== */
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription-section {
+  flex: 1; /* pushes footer down */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers vertically */
+  align-items: center; /* centers horizontally */
+  min-height: 100vh; /* ensures it fills screen height */
+  padding-top: 120px; /* avoids overlapping navbar */
+  padding-bottom: 60px;
+}
+
+.subscription-section .menu-title {
+  color: #945d10;
+  margin-bottom: 3rem;
+}
+
+.subscription-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.subscription-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer stays at bottom */
+.site-footer {
+  background-color: #7b4f2d;
+  color: #d3c4a0;
+  padding: 40px 20px;
+  font-family: 'Montserrat', sans
+}
+
