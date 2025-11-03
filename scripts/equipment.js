@@ -22,6 +22,18 @@ const renderMenu = (data) => {
         container.appendChild(cloneNode);
     });
 
+    
+     if (data.length === 0){
+        const emptyMessage = document.createElement("div");
+        emptyMessage.style.textAlign = "center";
+        emptyMessage.style.margin = "100px"
+        emptyMessage.style.fontSize = "1.5em";
+        emptyMessage.style.opacity = 0.5;
+        emptyMessage.innerHTML = `Not found <i class="bi bi-cup-hot"></i>`;
+        container.appendChild(emptyMessage);
+        
+    }
+
     menuContainer.appendChild(container);
     
 };
@@ -61,5 +73,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const searchTarget = document.getElementById("searchInput").value.toLowerCase().trim();
             const filtered = search(equipmentData, searchTarget);
             renderMenu(filtered);
+    })
+
+    document.getElementById("searchInput").addEventListener('keydown', (e) => {
+            const searchTarget = e.target.value.toLowerCase().trim();
+            if (e.key == "Enter"){
+                const filtered = search(equipmentData, searchTarget);
+                renderMenu(filtered);
+            }
     })
 });

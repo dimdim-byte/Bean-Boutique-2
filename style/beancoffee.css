@@ -1169,7 +1169,7 @@ header.main-header {
   padding: 10px 20px;
   width: 100%;
   border-radius: 10px;
-  
+  cursor: pointer;
 
 }
 
@@ -1265,4 +1265,15 @@ header.main-header {
   padding: 20px;
   outline: none;
   border: none;
+  transition: all 0.1s ease;
+}
+
+#searchBtn{
+  transition: all 0.1s ease;
+  opacity: 0.9;
+}
+
+#searchBtn:active{
+  transform: scale(1.1);
+  opacity: 1;
 }
