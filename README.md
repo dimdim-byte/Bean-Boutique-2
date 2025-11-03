@@ -70,7 +70,11 @@ cd Bean-Boutique/pages
 Open index.html in your browser
 
 👩🏻‍💻 Author
+
 Myat Myint Mo Khin, Frontend Developer & Designer
+
 Contact info: 
+
 💌 myatmyintmok@gmail.com
+
 🌐 https://github.com/dimdim-byte
