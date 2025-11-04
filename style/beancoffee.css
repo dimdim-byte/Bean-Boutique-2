@@ -47,7 +47,7 @@ header {
   transform: translate(-50%, -50%);
   z-index: 1000;
   border-radius: 20px;
-  display: flex; /* always flex */
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -244,7 +244,6 @@ header {
 }
 
 #coffee-menu {
-  /* background: url('assets/images/menu-bg.jpg') center/cover no-repeat; */
   color: white;
   padding: 5rem 0;
 }
@@ -609,7 +608,6 @@ header {
 }
 
 #equipment {
-  /* background: url('assets/images/equipment-bg.jpg') center/cover no-repeat; */
   color: white;
   padding: 5rem 0;
 }
@@ -1201,7 +1199,6 @@ header.main-header {
   max-height: 500px;
 }
 
-/* ====== FIX FOOTER POSITION ====== */
 html, body {
   height: 100%;
 }
@@ -1212,7 +1209,7 @@ body {
 }
 
 .subscription-section {
-  flex: 1; /* pushes footer down */
+  flex: 1; 
 }
 
 .site-footer {
@@ -1229,7 +1226,6 @@ body {
   color: #c9b58a;
 }
 
-/* ====== FIX FOOTER POSITION ====== */
 html, body {
   height: 100%;
 }
@@ -1240,13 +1236,13 @@ body {
 }
 
 .subscription-section {
-  flex: 1; /* pushes footer down */
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centers vertically */
-  align-items: center; /* centers horizontally */
-  min-height: 100vh; /* ensures it fills screen height */
-  padding-top: 120px; /* avoids overlapping navbar */
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh;
+  padding-top: 120px;
   padding-bottom: 60px;
 }
 
@@ -1264,11 +1260,11 @@ body {
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
-/* Footer stays at bottom */
 .site-footer {
   background-color: #7b4f2d;
   color: #d3c4a0;
   padding: 40px 20px;
   font-family: 'Montserrat', sans
 }
+
 
