@@ -1253,11 +1253,15 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .subscription-section {
   flex: 1; 
 .product-search-container img{
   width: 20px;
 }
+=======
+
+>>>>>>> 22425432c98d3e3714ec43df8b892425c5e3e48d
 
   width: 10%;
   border: none;
@@ -1320,6 +1324,10 @@ body {
 #searchBtn{
   transition: all 0.1s ease;
   opacity: 0.9;
+}
+
+#searchBtn img{
+  width: 20px;
 }
 
 #searchBtn:active{
