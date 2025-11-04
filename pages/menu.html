@@ -12,6 +12,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
   <link rel="stylesheet" href="../style/beancoffee.css">
+
+   <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://code.jquery.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net;
+    font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+    img-src 'self' data:;
+    connect-src 'self' https://cdn.jsdelivr.net;
+    frame-src 'self' https://www.google.com;
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+  ">
+
 </head>
 
 <body>
@@ -31,7 +45,7 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav gap-lg-4 text-center">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
           <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
           <li class="nav-item"><a class="nav-link" href="offers.html">Special Offers</a></li>
@@ -50,18 +64,23 @@
     <h2 class="menu-title text-center mt-5 mb-5">Explore our delicious coffee blends</h2> 
     <div class="custom-dropdown">
       <div class="sub-dropdown">
+        <div  class="product-search-container">
+          <input type="text" class="product-search" id="searchInput" placeholder="Search coffee">
+          <button id="searchBtn"><img src="../assets/images/search-interface-symbol.png" alt="search icon"></button>
+        </div>
+        <div class="sub-dropdown2">
         <div class="dropdown-btn"><span class="chosen">Default</span> <i class="bi bi-chevron-down"></i></div>
         <div class="options-box">
             <div class="options" data-option="default">Default</div>
             <div class="options" data-option="priceLow">Price low to high</div>
             <div class="options" data-option="priceHigh">Price high to low</div>
+            <div class="options" data-option="popularity">Popularity</div>
+        </div>
         </div>
       </div>
     </div>
     
-    <div class="coffee-filter mb-3">
-    <input type="text" id="coffeeSearch" placeholder="Search coffee...">
-    </div>
+    
     
     <div class="row g-4 justify-content-center coffee-container">
       <!-- Coffee Card -->
@@ -76,7 +95,6 @@
                 <img src="" alt="" class="bean-img">
                 <p></p>
                 <div class="rating">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
                 </div>
                 <button class="add-to-cart-btn"">Add to Cart</button>
               </div>
@@ -133,7 +151,7 @@
 </footer>
 
   <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 

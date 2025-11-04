@@ -1,3 +1,35 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById('registrationModal');
+  const openBtns = document.querySelectorAll('.register-btn');
+  const closeModalBtn = document.querySelector('.modal-close-btn');
+  const registrationForm = document.querySelector('.registration-form');
+
+  if (modal && openBtns && closeModalBtn && registrationForm){
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          modal.style.display = 'flex';
+        });
+      });
+
+      closeModalBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        
+      });
+
+      registrationForm.addEventListener('submit', (e)=> {
+        e.preventDefault();
+        modal.style.display = 'none';
+        showPopUp("Successfully registered")
+      })
+
+      window.addEventListener('click', (e) => {
+        if (e.target === modal) modal.style.display = 'none';
+      });
+  }
+
+ 
+})
+
 export const goToPage = (url) => {
   window.location.href = url;
 }
@@ -33,7 +65,7 @@ export const addToCart = (e) => {
         showPopUp(`${name} added to cart!`);
 }
 
-const showPopUp = (message) => {
+export const showPopUp = (message) => {
   
   const mainDiv = document.createElement('div');
   mainDiv.classList.add('popup-overlay');
@@ -91,16 +123,17 @@ export const fetchData = async (url) => {
 
 
 const ratings = {
-  1: `<i class="bi bi-star-fill"><i class="bi bi-star"><i class="bi bi-star"><i class="bi bi-star"><i class="bi bi-star">`,
-  1.5: `<i class="bi bi-star-fill"><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`,
-  2: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`,
-  2.5: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`,
-  3: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`,
-  3.5: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>`,
-  4: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>`,
-  4.5: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>`,
-  5: `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>`
-}
+  1: '<i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>',
+  1.5: '<i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>',
+  2: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>',
+  2.5: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>',
+  3: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>',
+  3.5: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i>',
+  4: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>',
+  4.5: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>',
+  5: '<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>'
+};
+
 
 export const cloneCardTemplate = (clone, element) => {
     clone.querySelector('.coffee-img').src = element.image;
@@ -116,7 +149,7 @@ export const cloneCardTemplate = (clone, element) => {
     }
     
     clone.querySelector('.coffee-info p').textContent = element.description;
-    clone.querySelector('.rating').innerHtml = ratings[element.rating];
+    clone.querySelector('.rating').innerHTML = ratings[element.rating];
     clone.querySelector('.add-to-cart-btn').textContent = "Add to Cart";
     clone.querySelector('.add-to-cart-btn').dataset.price = element.price;
     clone.querySelector('.add-to-cart-btn').addEventListener('click', addToCart);
@@ -125,8 +158,7 @@ export const cloneCardTemplate = (clone, element) => {
     return clone;
 }
 
-export const sortMenu = async (url, option, reRender) => {
-    const data = await fetchData(url);
+export const sortMenu = (data, option, reRender,) => {
     switch (option){
         case 'default':{
             reRender(data);
@@ -143,6 +175,12 @@ export const sortMenu = async (url, option, reRender) => {
             reRender(sorted);
             break;
         }
+        case 'popularity':{
+            const sorted = [...data].sort((a, b) => b.rating - a.rating);
+              reRender(sorted);
+              console.log(sorted);
+              break;
+        }
         
     }
 }
@@ -155,4 +193,22 @@ export const dropDownClose = (e) => {
     icon.classList.toggle('bi-chevron-down');
     icon.classList.toggle('bi-chevron-up');
     dropDownBtn.querySelector('.chosen').textContent = e.target.textContent;
+}
+
+export const search = (data, search) => {
+  const filtered = [...data].map(item => {
+        item.score = 0;
+        search.split(" ").forEach(s => {
+            switch (true){
+
+            case s === item.name.toLowerCase():
+                item.score += 20;
+            case item.name.toLowerCase().includes(s):
+                item.score += 10;   
+        }
+        })
+
+        return item;
+    }).filter(item => item.score >= 10).sort((a, b) => b.score - a.score)
+    return filtered;
 }

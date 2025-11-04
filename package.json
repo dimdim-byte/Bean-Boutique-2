@@ -1,0 +1,24 @@
+{
+  "name": "bean-boutique-2",
+  "version": "1.0.0",
+  "description": "☕ Bean Boutique\r A modern, responsive coffee shop website",
+  "homepage": "https://github.com/dimdim-byte/Bean-Boutique-2#readme",
+  "bugs": {
+    "url": "https://github.com/dimdim-byte/Bean-Boutique-2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimdim-byte/Bean-Boutique-2.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server . --open=./pages/index.html"
+  },
+  "dependencies": {
+    "live-server": "^1.2.0"
+  }
+}

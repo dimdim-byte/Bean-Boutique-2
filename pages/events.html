@@ -16,6 +16,20 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../style/beancoffee.css" />
+
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://code.jquery.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net;
+  font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+  img-src 'self' data:;
+  connect-src 'self' https://cdn.jsdelivr.net;
+  frame-src 'self' https://www.google.com;
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+">
+
 </head>
 <body>
 
@@ -24,7 +38,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0,0,0,0.3); backdrop-filter: blur(6px);">
       <div class="container-fluid px-4">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="../../assets/images/minimalist-coffee-logo-on-a-white-background-vector.png" alt="Bean Boutique Logo" class="logo me-2" />
+          <img src="../assets/images/minimalist-coffee-logo-on-a-white-background-vector.png" alt="Bean Boutique Logo" class="logo me-2" />
           <span class="brand-name">Bean Boutique</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -33,7 +47,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul class="navbar-nav gap-lg-4 text-center">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
             <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
             <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
             <li class="nav-item"><a class="nav-link" href="offers.html">Special Offers</a></li>
@@ -46,7 +60,7 @@
   </header>
 
     <!--Events and Workshops-->
-  <section id="events" class="events-section py-5">
+  <section id="events" class="events-section py-5 mt-5">
     <div class="container text-center">
       <h2 class="events-title mb-4">Check out for upcoming events and Register Now!</h2>
 

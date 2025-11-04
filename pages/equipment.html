@@ -5,22 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Equipment - Bean Boutique</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Playfair+Display&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="../style/beancoffee.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="../style/beancoffee.css">
+
+  <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://code.jquery.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net;
+  font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+  img-src 'self' data:;
+  connect-src 'self' https://cdn.jsdelivr.net;
+  frame-src 'self' https://www.google.com;
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self';
+  ">
+
 </head>
 
 <body>
 
-  <header class="main-header">
+<header class="main-header">
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(0,0,0,0.3); backdrop-filter: blur(6px);">
     <div class="container-fluid px-4">
       
       <a class="navbar-brand d-flex align-items-center" href="#home">
-        <img src="../../assets/images/minimalist-coffee-logo-on-a-white-background-vector.png" alt="Bean Boutique Logo" class="logo me-2" />
+        <img src="../assets/images/minimalist-coffee-logo-on-a-white-background-vector.png" alt="Bean Boutique Logo" class="logo me-2" />
         <span class="brand-name">Bean Boutique</span>
       </a>
 
@@ -31,7 +46,7 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav gap-lg-4 text-center">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
           <li class="nav-item"><a class="nav-link" href="equipment.html">Equipment</a></li>
           <li class="nav-item"><a class="nav-link" href="offers.html">Special Offers</a></li>
@@ -40,9 +55,7 @@
         </ul>
       </div>
 
-      <button class="btn btn-outline-light rounded-pill ms-lg-3" id="auth-toggle-btn">
-        <i class="bi bi-person"></i> Login / Signup
-      </button>
+     
     </div>
   </nav>
 </header>
@@ -50,11 +63,18 @@
     <h2 class="menu-title text-center mt-5 mb-5">Our Best-Selling Coffee Equipment</h2> 
     <div class="custom-dropdown">
       <div class="sub-dropdown">
+        <div class="product-search-container">
+          <input type="text" class="product-search" id="searchInput" placeholder="Search equipment">
+          <button id="searchBtn"><img src="../assets/images/search-interface-symbol.png" alt="search icon"></button>
+        </div>
+        <div class="sub-dropdown2">
         <div class="dropdown-btn"><span class="chosen">Default</span> <i class="bi bi-chevron-down"></i></div>
         <div class="options-box">
             <div class="options" data-option="default">Default</div>
             <div class="options" data-option="priceLow">Price low to high</div>
             <div class="options" data-option="priceHigh">Price high to low</div>
+            <div class="options" data-option="popularity">Popularity</div>
+        </div>
         </div>
       </div>
     </div>
@@ -71,7 +91,6 @@
                 <img src="" alt="" class="bean-img">
                 <p></p>
                 <div class="rating">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
                 </div>
                 <button class="add-to-cart-btn"">Add to Cart</button>
               </div>
