@@ -47,7 +47,7 @@ header {
   transform: translate(-50%, -50%);
   z-index: 1000;
   border-radius: 20px;
-  display: flex;
+  display: flex; /* always flex */
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -244,6 +244,7 @@ header {
 }
 
 #coffee-menu {
+  /* background: url('assets/images/menu-bg.jpg') center/cover no-repeat; */
   color: white;
   padding: 5rem 0;
 }
@@ -606,6 +607,7 @@ header {
 }
 
 #equipment {
+  /* background: url('assets/images/equipment-bg.jpg') center/cover no-repeat; */
   color: white;
   padding: 5rem 0;
 }
@@ -1238,11 +1240,6 @@ header.main-header {
   max-height: 500px;
 }
 
-html, body {
-  height: 100%;
-}
-
-body {
 .product-search-container{
   width: 70%;
   display: flex;
@@ -1252,17 +1249,7 @@ body {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.subscription-section {
-  flex: 1; 
-.product-search-container img{
-  width: 20px;
-}
-=======
-
->>>>>>> 22425432c98d3e3714ec43df8b892425c5e3e48d
-
+.product-search-container #searchBtn{
   width: 10%;
   border: none;
   background-color: #cdcdcd;
@@ -1277,50 +1264,6 @@ body {
   transition: all 0.1s ease;
 }
 
-<<<<<<< HEAD
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.subscription-section {
-  flex: 1; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
-  min-height: 100vh;
-  padding-top: 120px;
-  padding-bottom: 60px;
-}
-
-.subscription-section .menu-title {
-  color: #945d10;
-  margin-bottom: 3rem;
-}
-
-.subscription-card {
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.subscription-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
-}
-
-.site-footer {
-  background-color: #7b4f2d;
-  color: #d3c4a0;
-  padding: 40px 20px;
-  font-family: 'Montserrat', sans
-}
-
-
-=======
 #searchBtn{
   transition: all 0.1s ease;
   opacity: 0.9;
@@ -1334,4 +1277,3 @@ body {
   transform: scale(1.1);
   opacity: 1;
 }
-
