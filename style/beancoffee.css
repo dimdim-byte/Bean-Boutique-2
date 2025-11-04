@@ -1249,9 +1249,7 @@ header.main-header {
   overflow: hidden;
 }
 
-.product-search-container img{
-  width: 20px;
-}
+
 
 .product-search-container #searchBtn{
   width: 10%;
@@ -1271,6 +1269,10 @@ header.main-header {
 #searchBtn{
   transition: all 0.1s ease;
   opacity: 0.9;
+}
+
+#searchBtn img{
+  width: 20px;
 }
 
 #searchBtn:active{
