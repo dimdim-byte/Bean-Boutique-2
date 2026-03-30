@@ -5,6 +5,7 @@ Bean Boutique is a stylish, multi-page web project designed to showcase a coffee
 It features a clean, elegant design built with HTML, CSS, and JavaScript.
 
 📁 Project Structure
+```bash
 Bean-Boutique/
 ├── pages/          # Contains individual HTML pages
 │   ├── index.html  # Homepage
@@ -27,7 +28,7 @@ Bean-Boutique/
 │   └── cart.css
 │
 └── assets/         # Images, icons, and fonts
-
+```
 ⚙️ Features
 
 🏠 Multi-page responsive layout
@@ -57,14 +58,14 @@ Google Fonts — “Montserrat” and “Playfair Display” for typography
 🚀 How to Run Locally
 
 1. Clone the repository:
-
+```bash
 git clone https://github.com/yourusername/Bean-Boutique.git
-
+```
 
 2. Navigate to the project folder:
-
+```bash
 cd Bean-Boutique/pages
-
+```
 3. Open the site:
 
 Open index.html in your browser
