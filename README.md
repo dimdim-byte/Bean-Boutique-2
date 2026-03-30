@@ -69,7 +69,11 @@ cd Bean-Boutique/pages
 3. Open the site:
 
 Open index.html in your browser
-
+or 
+Run
+```bash
+npm run start
+```
 👩🏻‍💻 Author
 
 Myat Myint Mo Khin, Frontend Developer & Designer
